@@ -1,0 +1,1 @@
+bash -c 'mkdir -p ~/.ssh && echo "$DEPLOY_KEY_B64" | base64 -d > ~/.ssh/id_ed25519 && chmod 600 ~/.ssh/id_ed25519 && ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts 2>/dev/null && (git clone -q git@github.com:yazanjer/feddac-revision.git /workspace/repo || (cd /workspace/repo && git fetch -q)) && bash /workspace/repo/runpod/bootstrap.sh'
