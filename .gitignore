@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+data/
+*.npz
+*.tmp
+SHARD_DONE
+.venv/
+configs/*.jsonl
