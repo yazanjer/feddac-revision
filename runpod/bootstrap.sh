@@ -13,9 +13,14 @@ if git ls-remote --exit-code --heads origin "$BR" >/dev/null 2>&1; then
 else
   git checkout -q -B "$BR"
 fi
+mkdir -p logs
+exec > >(tee -a "logs/bootstrap-${POD_INDEX}.txt") 2>&1
+hb() { echo "[$(date -u +%H:%M:%S)] $*"; git add -A logs results >/dev/null 2>&1; git commit -qm "heartbeat: $*" >/dev/null 2>&1; git push -q origin "HEAD:$BR" >/dev/null 2>&1; }
+hb "cloned, installing requirements"
 pip install -q -r requirements.txt 2>&1 | tail -2
+hb "requirements installed"
 python scripts/make_grid.py && python scripts/make_grid.py pilot
-nvidia-smi --query-gpu=name,memory.total --format=csv
+nvidia-smi --query-gpu=name,memory.total --format=csv; nproc; free -g | head -2
 # pre-download datasets once (avoid races between concurrent processes)
 python - <<'PY'
 import json, torch
@@ -28,6 +33,7 @@ for d in sorted(need):
     except Exception as e:
         print("dataset FAILED", d, e)
 PY
+hb "datasets ready, starting worker"
 python scripts/worker.py --jobs "${JOBS:-configs/jobs.jsonl}" --sync_every "${SYNC:-600}" --shard "$POD_INDEX" --num_shards "$NUM_SHARDS" --procs "${PROCS:-4}" --branch "$BR" 2>&1 | tee -a "logs/worker-${POD_INDEX}.txt"
 git add -A results logs; git commit -qm "pod ${POD_INDEX}: final"; git push -q origin "HEAD:$BR"
 # self-terminate to stop billing (runpodctl is pre-installed on RunPod images)
