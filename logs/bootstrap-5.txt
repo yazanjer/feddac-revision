@@ -29,3 +29,6 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [13/175] rc=0 noniid_cifar10_ppcfl_N40_a0.1_r0.0-1.0-0.0_s0
 [14/175] rc=0 noniid_cifar10_ppcfl_N80_a0.1_r0.0-1.0-0.0_s2
 [15/175] rc=0 noniid_cifar10_fedseq_N20_a0.1_r0.0-1.0-0.0_s2
+[16/175] rc=0 main_cifar10_fedseq_N20_a0.2_r0.1-0.9-0.0_s4
+[17/175] rc=0 main_cifar10_ppcfl_N20_a0.2_r0.1-0.9-0.0_s4
+[18/175] rc=0 main_cifar10_fedavg_N20_a0.2_r0.1-0.9-0.0_s4
