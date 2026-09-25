@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/workspace/repo/scripts/run.py", line 134, in <module>
+    main()
+  File "/workspace/repo/scripts/run.py", line 91, in main
+    res, model, caps = run_federated(ds, part, cfg, device, capture_rounds=set(a.ldi_rounds))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/repo/scripts/../feddac/algorithms.py", line 162, in run_federated
+    ts.append(local_train(model, ds, idx[c], train_cfg, prox_ref=global_model,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/repo/scripts/../feddac/train.py", line 75, in local_train
+    loss = loss + 0.5 * mu * sum(((p - r) ** 2).sum() for p, r in zip(model.parameters(), ref))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/repo/scripts/../feddac/train.py", line 75, in <genexpr>
+    loss = loss + 0.5 * mu * sum(((p - r) ** 2).sum() for p, r in zip(model.parameters(), ref))
+                                  ~~~~~~~~^^~~
+  File "/usr/local/lib/python3.11/dist-packages/torch/_tensor.py", line 41, in wrapped
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 9.06 MiB is free. Process 813 has 4.11 GiB memory in use. Process 819 has 7.47 GiB memory in use. Process 835 has 7.65 GiB memory in use. Including non-PyTorch memory, this process has 4.29 GiB memory in use. Of the allocated memory 3.84 GiB is allocated by PyTorch, and 128.57 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+EXIT 1 in 133s

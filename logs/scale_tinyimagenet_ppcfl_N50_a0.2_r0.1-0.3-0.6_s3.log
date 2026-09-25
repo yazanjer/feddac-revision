@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/workspace/repo/scripts/run.py", line 134, in <module>
+    main()
+  File "/workspace/repo/scripts/run.py", line 91, in main
+    res, model, caps = run_federated(ds, part, cfg, device, capture_rounds=set(a.ldi_rounds))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/repo/scripts/../feddac/algorithms.py", line 184, in run_federated
+    cluster_models.append(weighted_average(group_states, U[:, k].tolist()))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/repo/scripts/../feddac/train.py", line 35, in weighted_average
+    acc += wi * s[k].float()
+           ~~~^~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 17.06 MiB is free. Process 813 has 4.11 GiB memory in use. Process 819 has 7.47 GiB memory in use. Process 835 has 7.65 GiB memory in use. Including non-PyTorch memory, this process has 4.28 GiB memory in use. Of the allocated memory 3.80 GiB is allocated by PyTorch, and 165.65 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+EXIT 1 in 114s
