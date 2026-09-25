@@ -52,8 +52,10 @@ def local_train(model: nn.Module, ds, idx: torch.Tensor, cfg: dict, prox_ref=Non
     t0 = time.perf_counter()
     model.train()
     lr = cfg.get("lr", 1e-3)
-    opt = (torch.optim.Adam if cfg.get("optimizer", "adam") == "adam" else torch.optim.SGD)(
-        model.parameters(), lr=lr)
+    if cfg.get("optimizer", "adam") == "adam":
+        opt = torch.optim.Adam(model.parameters(), lr=lr, fused=idx.is_cuda)
+    else:
+        opt = torch.optim.SGD(model.parameters(), lr=lr, momentum=cfg.get("momentum", 0.0))
     mu = cfg.get("mu", 0.0)
     ref = [p.detach().clone() for p in prox_ref.parameters()] if (mu > 0 and prox_ref is not None) else None
     if dp is not None:

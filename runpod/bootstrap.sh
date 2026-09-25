@@ -19,7 +19,7 @@ hb() { echo "[$(date -u +%H:%M:%S)] $*"; git add -A logs results >/dev/null 2>&1
 hb "cloned, installing requirements"
 pip install -q -r requirements.txt 2>&1 | tail -2
 hb "requirements installed"
-python scripts/make_grid.py && python scripts/make_grid.py pilot
+python scripts/make_grid.py && for g in pilot diag scale; do python scripts/make_grid.py $g; done
 nvidia-smi --query-gpu=name,memory.total --format=csv; nproc; free -g | head -2
 # pre-download the small datasets now; the large ones load in the background (file-locked)
 prep() { python -c "from feddac.data import load_dataset as l; d=l('$1','cpu'); print('dataset ok','$1',tuple(d.x_train.shape))" || echo "dataset FAILED $1"; }

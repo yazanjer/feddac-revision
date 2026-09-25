@@ -99,7 +99,7 @@ def run_federated(ds, part, cfg, device, log=print, capture_rounds=(), save_unit
     global_model = build_model(ds.name, C).to(device)
     P = num_params(global_model)
     amp = ds.name in ("cifar100", "tinyimagenet") and device.type == "cuda"
-    train_cfg = {k: cfg[k] for k in ("lr", "batch_size", "local_epochs", "optimizer") if k in cfg}
+    train_cfg = {k: cfg[k] for k in ("lr", "batch_size", "local_epochs", "optimizer", "momentum") if k in cfg}
     if method == "fedprox":
         train_cfg["mu"] = cfg.get("mu", 0.01)
 

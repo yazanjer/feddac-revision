@@ -50,6 +50,8 @@ def parse(argv=None):
     p.add_argument("--batch_size", type=int)
     p.add_argument("--lr", type=float)
     p.add_argument("--local_epochs", type=int, default=1)
+    p.add_argument("--optimizer", default="adam", choices=["adam", "sgd"])
+    p.add_argument("--momentum", type=float, default=0.0)
     p.add_argument("--mu", type=float, default=0.01)
     p.add_argument("--eval_every", type=int)
     p.add_argument("--dp_eps", type=float, default=None, help="total record-level epsilon")
@@ -81,6 +83,7 @@ def main(argv=None):
         print("exists, skipping", out_json)
         return
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    torch.backends.cudnn.benchmark = True
     ds = load_dataset(a.dataset, device)
     part = partition(ds.y_train.cpu().numpy(), a.clients, tuple(a.ratios), a.alpha, ds.num_classes,
                      seed=a.seed)

@@ -48,7 +48,7 @@ def grid():
     cfgs = []
     for N in (20, 30, 40, 50, 60, 70):
         cfgs.append(dict(clients=N))
-    for a in (0.1, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0):
+    for a in (0.1, 0.3, 0.5, 0.7, 1.0):
         cfgs.append(dict(alpha=a))
     for h in range(10):
         if h == 3:
@@ -61,13 +61,6 @@ def grid():
                     prio = 2 if ci == 0 else 4
                     jobs.append(job("main", prio, dataset=d, method=m, seed=s,
                                     save_model=(s == 0 and ci == 0), **c))
-    # E5 scalability
-    for d, Ns in (("cifar100", (20, 50)), ("tinyimagenet", (50,))):
-        for N in Ns:
-            for m in BASE:
-                for s in range(5):
-                    jobs.append(job("scale", 2, dataset=d, method=m, seed=s, clients=N,
-                                    save_model=(s == 0)))
     # E3 ablations
     for d in ("mnist", "cifar10"):
         for c in (dict(), dict(clients=50), dict(ratios=[0.1, 0.0, 0.9])):
@@ -75,14 +68,40 @@ def grid():
                 for s in range(5):
                     jobs.append(job("ablation", 3, dataset=d, method=m, seed=s, **c))
     # E2 non-IID characterisation
-    for a in (0.1, 0.3, 0.5, 0.7, 0.9):
-        for N in (20, 40, 60, 80):
+    for a in (0.1, 0.5, 0.9):
+        for N in (20, 40, 80):
             for m in BASE:
                 for s in range(3):
                     jobs.append(job("noniid", 5, dataset="cifar10", method=m, seed=s, clients=N,
                                     alpha=a, ratios=[0.0, 1.0, 0.0]))
     jobs.sort(key=lambda j: j["prio"])
     return jobs
+
+
+def scale_grid(extra=None):
+    """E5 (run as a separate phase): CIFAR-100 (N=20, 50) and Tiny-ImageNet (N=50), ResNet-18-GN."""
+    jobs = []
+    for d, Ns in (("cifar100", (20, 50)), ("tinyimagenet", (50,))):
+        for N in Ns:
+            for m in BASE:
+                for s in range(5):
+                    j = job("scale", 2, dataset=d, method=m, seed=s, clients=N, save_model=(s == 0))
+                    if extra:
+                        j["extra"] = list(extra)
+                    jobs.append(j)
+    return jobs
+
+
+def diag():
+    """Short learning-rate / optimiser check for the ResNet-18-GN runs (not part of the paper)."""
+    P = []
+    for opt in (["--lr", "1e-3", "--tag", "adam1e-3"], ["--lr", "3e-4", "--tag", "adam3e-4"],
+                ["--optimizer", "sgd", "--lr", "0.05", "--tag", "sgd0.05"]):
+        for m in ("fedavg", "feddac"):
+            j = job("diag", 0, dataset="cifar100", method=m, seed=0, rounds=10)
+            j["extra"] = opt + ["--eval_every", "1"]
+            P.append(j)
+    return P
 
 
 def to_argv(j):
@@ -99,6 +118,7 @@ def to_argv(j):
         a += ["--save_model"]
     if j.get("rounds"):
         a += ["--rounds", str(j["rounds"])]
+    a += list(j.get("extra", []))
     return a
 
 
@@ -116,9 +136,10 @@ def pilot():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "pilot":
-        with open("configs/pilot.jsonl", "w") as f:
-            for j in pilot():
+    if len(sys.argv) > 1 and sys.argv[1] in ("pilot", "diag", "scale"):
+        fn = {"pilot": pilot, "diag": diag, "scale": scale_grid}[sys.argv[1]]
+        with open(f"configs/{sys.argv[1]}.jsonl", "w") as f:
+            for j in fn():
                 f.write(json.dumps(j) + "\n")
         sys.exit(0)
     jobs = grid()
