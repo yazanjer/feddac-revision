@@ -23,3 +23,5 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [6/10] rc=0 attack_cifar10_fedse_N20_a0.2_r0.1-0.3-0.6_s2_sgd0.02_atk
 [7/10] rc=0 attack_cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.02_atk
 [8/10] rc=0 attack_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s1_sgd0.02_atk
+[9/10] rc=0 attack_cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s2_sgd0.02_atk
+[10/10] rc=0 attack_cifar10_rand_seq_N20_a0.2_r0.1-0.3-0.6_s1_sgd0.02_atk
