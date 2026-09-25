@@ -15,3 +15,7 @@ known finished runs: 1955
 shard 4/12: 141 jobs, est. cost 325
 dataset ok cifar100 (50000, 3, 32, 32)
 dataset ok tinyimagenet (100000, 3, 64, 64)
+[1/141] rc=0 noniid_cifar10_ppcfl_N20_a0.9_r0.0-1.0-0.0_s0_sgd0.02
+[2/141] rc=0 noniid_cifar10_ppcfl_N40_a0.9_r0.0-1.0-0.0_s0_sgd0.02
+[3/141] rc=0 noniid_cifar10_ppcfl_N80_a0.9_r0.0-1.0-0.0_s0_sgd0.02
+[4/141] rc=0 noniid_cifar10_ppcfl_N80_a0.5_r0.0-1.0-0.0_s0_sgd0.02
