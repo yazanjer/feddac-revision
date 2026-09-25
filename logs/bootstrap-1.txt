@@ -37,3 +37,5 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [21/30] rc=0 mia_cifar10_fedse_N20_a0.2_r0.1-0.3-0.6_s2
 [22/30] rc=0 mia_cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s0
 [23/30] rc=0 mia_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s1
+[24/30] rc=0 mia_cifar10_rand_seq_N20_a0.2_r0.1-0.3-0.6_s1
+[25/30] rc=0 mia_cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s2
