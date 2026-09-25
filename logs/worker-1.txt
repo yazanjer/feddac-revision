@@ -4,3 +4,5 @@ shard 1/4: 23 jobs, est. cost 216
 shard 1/4: 23 jobs, est. cost 216
 [1/23] rc=0 scale_cifar100_ppcfl_N20_a0.2_r0.1-0.3-0.6_s3
 [2/23] rc=0 scale_cifar100_fedavg_N20_a0.2_r0.1-0.3-0.6_s1
+[3/23] rc=0 scale_cifar100_fedseq_N20_a0.2_r0.1-0.3-0.6_s1
+[4/23] rc=0 scale_cifar100_fedse_N20_a0.2_r0.1-0.3-0.6_s2
