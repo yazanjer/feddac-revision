@@ -1,0 +1,14 @@
+[feddac] round 1/100 acc=10.91 f1=3.32
+[feddac] round 10/100 acc=20.03 f1=12.92
+[feddac] round 20/100 acc=31.39 f1=25.51
+[feddac] round 30/100 acc=35.74 f1=31.99
+[feddac] round 40/100 acc=36.65 f1=30.65
+[feddac] round 50/100 acc=37.64 f1=32.74
+[feddac] round 60/100 acc=38.80 f1=35.20
+[feddac] round 70/100 acc=34.55 f1=29.74
+[feddac] round 80/100 acc=38.56 f1=33.87
+[feddac] round 90/100 acc=37.72 f1=34.46
+[feddac] round 100/100 acc=36.54 f1=32.98
+done cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_dp8_s3_4a14967eba: acc=36.54 f1=32.98 (1615s)
+
+EXIT 0 in 1618s
