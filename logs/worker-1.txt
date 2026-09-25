@@ -4,3 +4,5 @@ shard 1/2: 15 jobs, est. cost 81
 [3/15] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s0_proxfix_dp4.0
 [4/15] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s4_proxfix_dp4.0
 [5/15] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s2_proxfix_dp4.0
+[6/15] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s1_proxfix_dp8.0
+[7/15] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s3_proxfix_dp8.0
