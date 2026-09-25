@@ -27,3 +27,9 @@ shard 4/10: 175 jobs, est. cost 396
 [26/175] rc=0 dp_cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s1_dp8.0
 [27/175] rc=0 ablation_mnist_rand_seq_N20_a0.2_r0.1-0.3-0.6_s1
 [28/175] rc=0 ablation_mnist_dac_uniform_N20_a0.2_r0.1-0.3-0.6_s1
+[29/175] rc=0 main_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s1
+[30/175] rc=0 ablation_mnist_dac_noisyhist_N20_a0.2_r0.1-0.3-0.6_s1
+[31/175] rc=0 ablation_mnist_dac_par_N50_a0.2_r0.1-0.3-0.6_s1
+[32/175] rc=0 main_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s1
+[33/175] rc=0 main_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s1
+[34/175] rc=0 ablation_mnist_dac_samplew_N50_a0.2_r0.1-0.3-0.6_s1
