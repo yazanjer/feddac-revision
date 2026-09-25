@@ -25,3 +25,5 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [8/15] rc=0 dp_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s0_proxfix_dp1.0
 [9/15] rc=0 dp_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s2_proxfix_dp1.0
 [10/15] rc=0 dp_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s4_proxfix_dp1.0
+[11/15] rc=0 dp_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s3_proxfix_dp4.0
+[12/15] rc=0 dp_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s1_proxfix_dp4.0
