@@ -34,3 +34,4 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [18/175] rc=0 dp_cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s0_dp1.0
 [19/175] rc=0 dp_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s0_dp4.0
 [20/175] rc=0 dp_cifar10_fedse_N20_a0.2_r0.1-0.3-0.6_s0_dp4.0
+[21/175] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.3-0.6_s0
