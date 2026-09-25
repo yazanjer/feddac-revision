@@ -19,3 +19,4 @@ shard 0/4: 23 jobs, est. cost 216
 [18/23] rc=0 scale_tinyimagenet_fedprox_N50_a0.2_r0.1-0.3-0.6_s3
 [19/23] rc=0 scale_tinyimagenet_fedse_N50_a0.2_r0.1-0.3-0.6_s1
 [20/23] rc=0 scale_tinyimagenet_ppcfl_N50_a0.2_r0.1-0.3-0.6_s2
+[21/23] rc=0 scale_tinyimagenet_fedseq_N50_a0.2_r0.1-0.3-0.6_s0
