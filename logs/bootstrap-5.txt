@@ -14,3 +14,4 @@ dataset ok cifar10 (50000, 3, 32, 32)
 shard 5/10: 175 jobs, est. cost 396
 dataset ok cifar100 (50000, 3, 32, 32)
 dataset ok tinyimagenet (100000, 3, 64, 64)
+[01:32:23] cloned, installing requirements
