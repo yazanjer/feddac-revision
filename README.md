@@ -1,5 +1,7 @@
 # FedDAC — revision code
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22965988.svg)](https://doi.org/10.5281/zenodo.22965988)
+
 Code accompanying the revised manuscript **"FedDAC: Federated Learning with Distribution
 Anonymization through Clustering on non-IID data"** (major revision of MEAS-D-26-14209).
 
@@ -32,7 +34,9 @@ scripts/make_grid.py   the full experiment grid of the paper (configs/jobs.jsonl
 scripts/worker.py      shard runner used on RunPod (N concurrent runs per GPU, git sync)
 scripts/aggregate.py   results -> LaTeX tables, CSV, PDF figures (paper_assets/)
 scripts/cluster_analysis.py  training-free coverage and cluster-size side-channel analysis
-runpod/                pod bootstrap
+scripts/package_zenodo.py    code / results / paper-asset archives for Zenodo
+scripts/zenodo_upload.py     rebuilds the full Zenodo bundle from the repository branches and uploads it
+runpod/                pod bootstrap (MODE=collect / models / zenodo for the maintenance jobs)
 ```
 
 ## Quick start
@@ -73,4 +77,4 @@ FedSeq K_S,max = 11, min 800 samples. Sequential order within a group is re-draw
 clip 1.0, δ = 1e-5, ε_hist = 0.5 for methods that use label statistics.
 
 ## License
-MIT (code). Trained models and result files released on Zenodo under CC-BY-4.0.
+MIT (code). Trained models and result files are archived on Zenodo: https://doi.org/10.5281/zenodo.22965988 (CC-BY-4.0).

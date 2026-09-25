@@ -6,4 +6,5 @@ license: MIT
 authors:
   - family-names: Hashim
     given-names: Ali
+doi: "10.5281/zenodo.22965988"
 repository-code: "https://github.com/yazanjer/feddac-revision"
