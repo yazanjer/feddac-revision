@@ -82,6 +82,10 @@ def main(argv=None):
     if os.path.exists(out_json):
         print("exists, skipping", out_json)
         return
+    done_list = os.path.join(os.path.dirname(__file__), "..", "configs", "done.txt")
+    if os.path.exists(done_list) and f"results/{a.exp}/{rid}.json" in set(open(done_list).read().split()):
+        print("already finished on another worker, skipping", rid)
+        return
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     torch.backends.cudnn.benchmark = True
     ds = load_dataset(a.dataset, device)

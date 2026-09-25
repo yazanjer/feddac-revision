@@ -25,6 +25,10 @@ nvidia-smi --query-gpu=name,memory.total --format=csv; nproc; free -g | head -2
 prep() { python -c "from feddac.data import load_dataset as l; d=l('$1','cpu'); print('dataset ok','$1',tuple(d.x_train.shape))" || echo "dataset FAILED $1"; }
 prep mnist; prep cifar10
 (prep cifar100; prep tinyimagenet) &
+# results already produced by any worker (all results/* branches) are skipped by run.py
+git fetch -q origin '+refs/heads/results/*:refs/remotes/origin/results/*' || true
+for r in $(git for-each-ref --format='%(refname)' refs/remotes/origin/results); do git ls-tree -r --name-only "$r" results; done | sort -u > configs/done.txt
+echo "known finished runs: $(wc -l < configs/done.txt)"
 hb "datasets ready, starting worker"
 python scripts/worker.py --jobs "${JOBS:-configs/jobs.jsonl}" --sync_every "${SYNC:-600}" --shard "$POD_INDEX" --num_shards "$NUM_SHARDS" --procs "${PROCS:-4}" --branch "$BR" ${REVERSE:+--reverse} 2>&1 | tee -a "logs/worker-${POD_INDEX}.txt"
 git add -A results logs; git commit -qm "pod ${POD_INDEX}: final"; git push -q origin "HEAD:$BR"
