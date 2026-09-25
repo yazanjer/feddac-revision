@@ -153,6 +153,16 @@ def dpprox_grid():
     return jobs
 
 
+def attacksgd_grid():
+    """Non-private CIFAR-10 LDI + class-matched MIA re-run with the selected optimiser (SGD 0.02)."""
+    jobs = []
+    for m in BASE + ["rand_seq"]:
+        for s in range(3):
+            jobs.append(job("attack", 0, dataset="cifar10", method=m, seed=s, ldi_rounds=[1, 50, 100], mia=True,
+                            extra=list(SGD_C10)))
+    return jobs
+
+
 def to_argv(j):
     a = ["--dataset", j["dataset"], "--method", j["method"], "--clients", str(j["clients"]),
          "--alpha", str(j["alpha"]), "--ratios", *map(str, j["ratios"]), "--seed", str(j["seed"]),
@@ -185,8 +195,8 @@ def pilot():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] in ("pilot", "diag", "scale", "mia", "lrsel", "dpprox"):
-        fn = {"pilot": pilot, "diag": diag, "mia": mia_grid, "lrsel": lrsel_grid, "dpprox": dpprox_grid,
+    if len(sys.argv) > 1 and sys.argv[1] in ("pilot", "diag", "scale", "mia", "lrsel", "dpprox", "attacksgd"):
+        fn = {"pilot": pilot, "diag": diag, "mia": mia_grid, "lrsel": lrsel_grid, "dpprox": dpprox_grid, "attacksgd": attacksgd_grid,
               "scale": lambda: scale_grid(["--optimizer", "sgd", "--lr", "0.05"])}[sys.argv[1]]
         with open(f"configs/{sys.argv[1]}.jsonl", "w") as f:
             for j in fn():
