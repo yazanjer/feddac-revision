@@ -146,3 +146,4 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [129/146] rc=0 main_cifar10_fedse_N20_a0.2_r0.1-0.6-0.3_s4_sgd0.02
 [130/146] rc=0 main_cifar10_ppcfl_N20_a0.2_r0.1-0.7-0.2_s3_sgd0.02
 [131/146] rc=0 main_cifar10_feddac_N20_a0.2_r0.1-0.7-0.2_s0_sgd0.02
+[132/146] rc=0 main_cifar10_fedprox_N20_a0.2_r0.1-0.6-0.3_s2_sgd0.02
