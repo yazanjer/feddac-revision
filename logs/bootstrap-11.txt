@@ -103,3 +103,4 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [86/146] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.6-0.3_s4
 [87/146] rc=0 main_mnist_feddac_N20_a0.2_r0.1-0.6-0.3_s1
 [88/146] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.8-0.1_s4
+[89/146] rc=0 main_mnist_feddac_N20_a0.2_r0.1-0.8-0.1_s1
