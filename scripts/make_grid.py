@@ -137,7 +137,8 @@ def pilot():
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] in ("pilot", "diag", "scale"):
-        fn = {"pilot": pilot, "diag": diag, "scale": scale_grid}[sys.argv[1]]
+        fn = {"pilot": pilot, "diag": diag,
+              "scale": lambda: scale_grid(["--optimizer", "sgd", "--lr", "0.05"])}[sys.argv[1]]
         with open(f"configs/{sys.argv[1]}.jsonl", "w") as f:
             for j in fn():
                 f.write(json.dumps(j) + "\n")
