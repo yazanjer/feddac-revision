@@ -29,3 +29,7 @@ shard 9/10: 176 jobs, est. cost 398
 [28/176] rc=0 main_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s1
 [29/176] rc=0 ablation_mnist_dac_par_N20_a0.2_r0.1-0.3-0.6_s1
 [30/176] rc=0 ablation_mnist_dac_samplew_N20_a0.2_r0.1-0.3-0.6_s1
+[31/176] rc=0 ablation_mnist_rand_seq_N50_a0.2_r0.1-0.3-0.6_s1
+[32/176] rc=0 ablation_mnist_dac_uniform_N50_a0.2_r0.1-0.3-0.6_s1
+[33/176] rc=0 ablation_mnist_dac_noisyhist_N50_a0.2_r0.1-0.3-0.6_s1
+[34/176] rc=0 main_cifar10_fedse_N20_a0.2_r0.1-0.3-0.6_s1
