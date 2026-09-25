@@ -1,0 +1,14 @@
+[dac_samplew] round 1/100 acc=19.33 f1=11.72
+[dac_samplew] round 10/100 acc=40.44 f1=36.56
+[dac_samplew] round 20/100 acc=39.44 f1=38.95
+[dac_samplew] round 30/100 acc=55.42 f1=52.93
+[dac_samplew] round 40/100 acc=45.95 f1=45.62
+[dac_samplew] round 50/100 acc=55.70 f1=55.08
+[dac_samplew] round 60/100 acc=55.36 f1=54.56
+[dac_samplew] round 70/100 acc=57.12 f1=56.32
+[dac_samplew] round 80/100 acc=60.69 f1=60.45
+[dac_samplew] round 90/100 acc=57.53 f1=57.39
+[dac_samplew] round 100/100 acc=63.18 f1=62.01
+done cifar10_dac_samplew_N20_a0.2_r0.1-0-0.9_s1_c08f62e6fd: acc=63.18 f1=62.01 (789s)
+
+EXIT 0 in 791s
