@@ -13,7 +13,7 @@ if git ls-remote --exit-code --heads origin "$BR" >/dev/null 2>&1; then
 else
   git checkout -q -B "$BR"
 fi
-mkdir -p logs
+mkdir -p logs results && touch results/.keep
 exec > >(tee -a "logs/bootstrap-${POD_INDEX}.txt") 2>&1
 hb() { echo "[$(date -u +%H:%M:%S)] $*"; git add -A logs results >/dev/null 2>&1; git commit -qm "heartbeat: $*" >/dev/null 2>&1; git push -q origin "HEAD:$BR" >/dev/null 2>&1; }
 hb "cloned, installing requirements"
