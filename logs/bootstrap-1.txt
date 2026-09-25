@@ -11,3 +11,6 @@ Mem:            1007          59         555           0         392         941
 dataset ok mnist (60000, 1, 28, 28)
 dataset ok cifar10 (50000, 3, 32, 32)
 [04:23:03] datasets ready, starting worker
+shard 1/3: 20 jobs, est. cost 50
+dataset ok cifar100 (50000, 3, 32, 32)
+dataset ok tinyimagenet (100000, 3, 64, 64)
