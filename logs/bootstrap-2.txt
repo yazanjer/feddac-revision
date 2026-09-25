@@ -2,3 +2,13 @@
 [notice] A new release of pip is available: 24.2 -> 26.2.1
 [notice] To update, run: python -m pip install --upgrade pip
 [05:57:22] requirements installed
+1728 jobs Counter({'main': 1230, 'dp': 180, 'ablation': 150, 'noniid': 108, 'attack': 60})
+name, memory.total [MiB]
+NVIDIA GeForce RTX 3090, 24576 MiB
+128
+               total        used        free      shared  buff/cache   available
+Mem:             220          18          87           0         113         199
+dataset ok mnist (60000, 1, 28, 28)
+dataset ok cifar10 (50000, 3, 32, 32)
+known finished runs: 1237
+[05:57:42] datasets ready, starting worker
