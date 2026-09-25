@@ -116,3 +116,5 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [100/177] rc=0 main_mnist_fedse_N20_a0.2_r0.1-0.8-0.1_s2
 [101/177] rc=0 main_mnist_feddac_N20_a0.2_r0.1-0.8-0.1_s2
 [102/177] rc=0 main_mnist_fedprox_N20_a0.2_r0.1-0.9-0.0_s2
+[103/177] rc=0 main_mnist_fedse_N20_a0.2_r0.1-0.9-0.0_s2
+[104/177] rc=0 main_mnist_feddac_N20_a0.2_r0.1-0.9-0.0_s2
