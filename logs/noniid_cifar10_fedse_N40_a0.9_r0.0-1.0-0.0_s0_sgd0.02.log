@@ -1,2 +1,16 @@
 /usr/local/lib/python3.11/dist-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
   return torch._C._cuda_getDeviceCount() > 0
+[fedse] round 1/100 acc=39.84 f1=35.47
+[fedse] round 10/100 acc=70.67 f1=70.42
+[fedse] round 20/100 acc=71.13 f1=70.89
+[fedse] round 30/100 acc=71.19 f1=71.46
+[fedse] round 40/100 acc=71.90 f1=71.99
+[fedse] round 50/100 acc=72.32 f1=72.16
+[fedse] round 60/100 acc=72.74 f1=72.39
+[fedse] round 70/100 acc=73.01 f1=72.81
+[fedse] round 80/100 acc=73.17 f1=73.04
+[fedse] round 90/100 acc=73.22 f1=73.09
+[fedse] round 100/100 acc=73.44 f1=73.31
+done cifar10_fedse_N40_a0.9_r0-1-0_s0_f34d93f563: acc=73.44 f1=73.31 (2926s)
+
+EXIT 0 in 2928s

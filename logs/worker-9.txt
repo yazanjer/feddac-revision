@@ -1,1 +1,3 @@
 shard 9/12: 146 jobs, est. cost 326
+[1/146] rc=0 noniid_cifar10_fedse_N80_a0.9_r0.0-1.0-0.0_s0_sgd0.02
+[2/146] rc=0 noniid_cifar10_fedse_N40_a0.9_r0.0-1.0-0.0_s0_sgd0.02
