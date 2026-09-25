@@ -69,3 +69,7 @@ shard 0/10: 177 jobs, est. cost 397
 [68/177] rc=0 main_mnist_feddac_N20_a0.3_r0.1-0.3-0.6_s2
 [69/177] rc=0 main_mnist_fedse_N20_a0.5_r0.1-0.3-0.6_s2
 [70/177] rc=0 main_mnist_fedprox_N20_a0.5_r0.1-0.3-0.6_s2
+[71/177] rc=0 main_mnist_feddac_N20_a0.5_r0.1-0.3-0.6_s2
+[72/177] rc=0 main_mnist_fedse_N20_a0.7_r0.1-0.3-0.6_s2
+[73/177] rc=0 main_mnist_fedprox_N20_a0.7_r0.1-0.3-0.6_s2
+[74/177] rc=0 main_mnist_feddac_N20_a0.7_r0.1-0.3-0.6_s2
