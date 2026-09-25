@@ -1,0 +1,5 @@
+[fedprox] round 30/60 acc=3.35 f1=1.24
+[fedprox] round 60/60 acc=7.11 f1=4.21
+done tinyimagenet_fedprox_N50_a0.2_r0.1-0.3-0.6_s0_debcfefacc: acc=7.11 f1=4.21 (5134s)
+
+EXIT 0 in 5137s
