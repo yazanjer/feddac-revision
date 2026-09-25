@@ -18,3 +18,12 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [notice] A new release of pip is available: 24.2 -> 26.2.1
 [notice] To update, run: python -m pip install --upgrade pip
 [01:33:30] requirements installed
+1752 jobs Counter({'main': 1200, 'dp': 180, 'noniid': 162, 'ablation': 150, 'attack': 60})
+name, memory.total [MiB]
+NVIDIA GeForce RTX 4090, 24564 MiB
+152
+               total        used        free      shared  buff/cache   available
+Mem:             755          23         286           0         445         725
+dataset ok mnist (60000, 1, 28, 28)
+dataset ok cifar10 (50000, 3, 32, 32)
+[01:34:02] datasets ready, starting worker
