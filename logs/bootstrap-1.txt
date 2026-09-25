@@ -16,3 +16,4 @@ dataset ok cifar100 (50000, 3, 32, 32)
 dataset ok tinyimagenet (100000, 3, 64, 64)
 [1/23] rc=0 scale_cifar100_fedavg_N20_a0.2_r0.1-0.3-0.6_s1
 [2/23] rc=0 scale_cifar100_ppcfl_N20_a0.2_r0.1-0.3-0.6_s3
+[02:51:20] cloned, installing requirements
