@@ -1,17 +1,3 @@
-[07:33:34] cloned, installing requirements
-[notice] A new release of pip is available: 24.2 -> 26.2.1
-[notice] To update, run: python -m pip install --upgrade pip
-[07:34:02] requirements installed
-1728 jobs Counter({'main': 1230, 'dp': 180, 'ablation': 150, 'noniid': 108, 'attack': 60})
-name, memory.total [MiB]
-NVIDIA GeForce RTX 3090, 24576 MiB
-16
-               total        used        free      shared  buff/cache   available
-Mem:              62           2           6           0          53          58
-dataset ok mnist (60000, 1, 28, 28)
-dataset ok cifar10 (50000, 3, 32, 32)
-known finished runs: 1613
-[07:34:35] datasets ready, starting worker
 shard 0/4: 23 jobs, est. cost 216
 [1/23] rc=0 scale_cifar100_fedavg_N20_a0.2_r0.1-0.3-0.6_s4
 [2/23] rc=0 scale_cifar100_fedprox_N20_a0.2_r0.1-0.3-0.6_s3
@@ -25,9 +11,7 @@ shard 0/4: 23 jobs, est. cost 216
 [10/23] rc=0 scale_cifar100_ppcfl_N50_a0.2_r0.1-0.3-0.6_s0
 [11/23] rc=0 scale_cifar100_fedprox_N50_a0.2_r0.1-0.3-0.6_s1
 [12/23] rc=0 scale_cifar100_fedse_N50_a0.2_r0.1-0.3-0.6_s3
-dataset ok cifar100 (50000, 3, 32, 32)
 [13/23] rc=0 scale_cifar100_fedseq_N50_a0.2_r0.1-0.3-0.6_s2
 [14/23] rc=0 scale_cifar100_feddac_N50_a0.2_r0.1-0.3-0.6_s1
 [15/23] rc=0 scale_tinyimagenet_fedavg_N50_a0.2_r0.1-0.3-0.6_s0
 [16/23] rc=0 scale_tinyimagenet_fedavg_N50_a0.2_r0.1-0.3-0.6_s4
-dataset ok tinyimagenet (100000, 3, 64, 64)
