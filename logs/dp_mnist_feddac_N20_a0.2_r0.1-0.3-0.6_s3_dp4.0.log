@@ -1,0 +1,16 @@
+/usr/local/lib/python3.11/dist-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+[feddac] round 1/50 acc=25.55 f1=17.08
+[feddac] round 5/50 acc=75.74 f1=73.46
+[feddac] round 10/50 acc=86.06 f1=85.22
+[feddac] round 15/50 acc=92.15 f1=92.03
+[feddac] round 20/50 acc=91.97 f1=91.85
+[feddac] round 25/50 acc=93.50 f1=93.41
+[feddac] round 30/50 acc=93.04 f1=92.95
+[feddac] round 35/50 acc=93.38 f1=93.32
+[feddac] round 40/50 acc=94.17 f1=94.11
+[feddac] round 45/50 acc=94.48 f1=94.42
+[feddac] round 50/50 acc=94.24 f1=94.21
+done mnist_feddac_N20_a0.2_r0.1-0.3-0.6_dp4_s3_b89dbc18cf: acc=94.24 f1=94.21 (385s)
+
+EXIT 0 in 388s
