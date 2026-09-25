@@ -27,3 +27,4 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [11/176] rc=0 dp_mnist_fedavg_N20_a0.2_r0.1-0.3-0.6_s1_dp8.0
 [12/176] rc=0 dp_mnist_ppcfl_N20_a0.2_r0.1-0.3-0.6_s1_dp8.0
 [13/176] rc=0 dp_mnist_fedseq_N20_a0.2_r0.1-0.3-0.6_s1_dp8.0
+[14/176] rc=0 attack_cifar10_fedse_N20_a0.2_r0.1-0.3-0.6_s2_dp4.0_atk
