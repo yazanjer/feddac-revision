@@ -1,0 +1,5 @@
+[fedavg] round 30/60 acc=3.42 f1=1.31
+[fedavg] round 60/60 acc=7.16 f1=4.31
+done tinyimagenet_fedavg_N50_a0.2_r0.1-0.3-0.6_s0_f935b81b72: acc=7.16 f1=4.31 (5594s)
+
+EXIT 0 in 5599s
