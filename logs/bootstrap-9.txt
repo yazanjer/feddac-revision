@@ -63,3 +63,37 @@ dataset ok cifar10 (50000, 3, 32, 32)
 dataset ok cifar100 (50000, 3, 32, 32)
 known finished runs: 1912
 [09:01:11] datasets ready, starting worker
+shard 9/12: 146 jobs, est. cost 326
+[1/146] rc=0 attack_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s0_atk
+[2/146] rc=0 attack_cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s0_atk
+[3/146] rc=0 attack_mnist_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_dp4.0_atk
+[4/146] rc=0 attack_cifar10_fedse_N20_a0.2_r0.1-0.3-0.6_s0_dp4.0_atk
+[5/146] rc=0 attack_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s0_atk
+[6/146] rc=0 dp_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s2_dp1.0
+[7/146] rc=0 dp_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s0_dp1.0
+[8/146] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s4_dp4.0
+[9/146] rc=0 dp_mnist_fedseq_N20_a0.2_r0.1-0.3-0.6_s1_dp4.0
+[10/146] rc=0 dp_mnist_fedavg_N20_a0.2_r0.1-0.3-0.6_s3_dp8.0
+[11/146] rc=0 dp_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s0_dp8.0
+[12/146] rc=0 dp_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s2_dp8.0
+[13/146] rc=0 dp_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s1_dp1.0
+[14/146] rc=0 dp_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s3_dp4.0
+[15/146] rc=0 dp_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s4_dp1.0
+[16/146] rc=0 dp_cifar10_fedse_N20_a0.2_r0.1-0.3-0.6_s0_dp4.0
+[17/146] rc=0 dp_cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s2_dp4.0
+[18/146] rc=0 dp_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s4_dp8.0
+[19/146] rc=0 dp_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s1_dp8.0
+[20/146] rc=0 main_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s1
+[21/146] rc=0 main_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s3
+[22/146] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.3-0.6_s2
+[23/146] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.3-0.6_s4
+[24/146] rc=0 main_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s1
+[25/146] rc=0 main_cifar10_fedse_N20_a0.2_r0.1-0.3-0.6_s3
+[26/146] rc=0 ablation_mnist_rand_seq_N20_a0.2_r0.1-0.3-0.6_s0
+[27/146] rc=0 ablation_mnist_dac_par_N20_a0.2_r0.1-0.3-0.6_s1
+[28/146] rc=0 ablation_mnist_dac_samplew_N20_a0.2_r0.1-0.3-0.6_s3
+[29/146] rc=0 ablation_mnist_dac_par_N50_a0.2_r0.1-0.3-0.6_s0
+[30/146] rc=0 ablation_mnist_dac_samplew_N50_a0.2_r0.1-0.3-0.6_s2
+[31/146] rc=0 ablation_mnist_rand_seq_N20_a0.2_r0.1-0.0-0.9_s4
+[32/146] rc=0 ablation_mnist_dac_samplew_N20_a0.2_r0.1-0.0-0.9_s1
+dataset ok tinyimagenet (100000, 3, 64, 64)
