@@ -5,3 +5,4 @@ shard 0/1: 6 jobs, est. cost 48
 [4/6] rc=0 diag_cifar100_feddac_N20_a0.2_r0.1-0.3-0.6_s0
 [5/6] rc=0 diag_cifar100_fedavg_N20_a0.2_r0.1-0.3-0.6_s0
 [6/6] rc=0 diag_cifar100_fedavg_N20_a0.2_r0.1-0.3-0.6_s0
+ALL DONE
