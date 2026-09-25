@@ -1,0 +1,14 @@
+[dac_par] round 1/100 acc=11.83 f1=4.83
+[dac_par] round 10/100 acc=42.22 f1=39.71
+[dac_par] round 20/100 acc=49.85 f1=48.56
+[dac_par] round 30/100 acc=55.23 f1=54.58
+[dac_par] round 40/100 acc=57.62 f1=56.96
+[dac_par] round 50/100 acc=60.21 f1=59.69
+[dac_par] round 60/100 acc=61.19 f1=60.94
+[dac_par] round 70/100 acc=62.06 f1=61.79
+[dac_par] round 80/100 acc=62.31 f1=62.09
+[dac_par] round 90/100 acc=62.61 f1=62.33
+[dac_par] round 100/100 acc=62.61 f1=62.36
+done cifar10_dac_par_N20_a0.2_r0.1-0-0.9_s0_1a758ecd5b: acc=62.61 f1=62.36 (769s)
+
+EXIT 0 in 772s
