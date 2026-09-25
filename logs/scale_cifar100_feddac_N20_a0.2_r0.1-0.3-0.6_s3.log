@@ -9,3 +9,5 @@
 [feddac] round 90/100 acc=40.55 f1=39.42
 [feddac] round 100/100 acc=40.58 f1=38.56
 done cifar100_feddac_N20_a0.2_r0.1-0.3-0.6_s3_574fefffc4: acc=40.58 f1=38.56 (4745s)
+
+EXIT 0 in 4748s
