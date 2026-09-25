@@ -47,3 +47,4 @@ dataset ok cifar100 (50000, 3, 32, 32)
 [31/146] rc=0 ablation_mnist_rand_seq_N20_a0.2_r0.1-0.0-0.9_s4
 [32/146] rc=0 ablation_mnist_dac_samplew_N20_a0.2_r0.1-0.0-0.9_s1
 dataset ok tinyimagenet (100000, 3, 64, 64)
+[08:41:54] cloned, installing requirements
