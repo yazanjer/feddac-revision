@@ -3,3 +3,7 @@ shard 0/2: 11 jobs, est. cost 44
 [1/11] rc=0 attack_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.02_atk
 [2/11] rc=0 attack_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.02_atk
 [3/11] rc=0 attack_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s2_sgd0.02_atk
+[4/11] rc=0 attack_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s1_sgd0.02_atk
+[5/11] rc=0 attack_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.02_atk
+[6/11] rc=0 attack_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s2_sgd0.02_atk
+[7/11] rc=0 attack_cifar10_fedse_N20_a0.2_r0.1-0.3-0.6_s1_sgd0.02_atk
