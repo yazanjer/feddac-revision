@@ -1,1 +1,3 @@
 shard 1/2: 10 jobs, est. cost 40
+[1/10] rc=0 attack_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s1_sgd0.02_atk
+[2/10] rc=0 attack_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s1_sgd0.02_atk
