@@ -81,3 +81,11 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [65/176] rc=0 main_mnist_ppcfl_N20_a0.3_r0.1-0.3-0.6_s0
 [66/176] rc=0 main_mnist_fedseq_N20_a0.3_r0.1-0.3-0.6_s0
 [67/176] rc=0 main_mnist_fedavg_N20_a0.5_r0.1-0.3-0.6_s0
+[68/176] rc=0 main_mnist_ppcfl_N20_a0.5_r0.1-0.3-0.6_s0
+[69/176] rc=0 main_mnist_fedseq_N20_a0.5_r0.1-0.3-0.6_s0
+[70/176] rc=0 main_mnist_fedavg_N20_a0.7_r0.1-0.3-0.6_s0
+[71/176] rc=0 main_mnist_ppcfl_N20_a0.7_r0.1-0.3-0.6_s0
+[72/176] rc=0 main_mnist_fedseq_N20_a0.7_r0.1-0.3-0.6_s0
+[73/176] rc=0 main_mnist_fedavg_N20_a1.0_r0.1-0.3-0.6_s0
+[74/176] rc=0 main_mnist_ppcfl_N20_a1.0_r0.1-0.3-0.6_s0
+[75/176] rc=0 main_mnist_fedseq_N20_a1.0_r0.1-0.3-0.6_s0
