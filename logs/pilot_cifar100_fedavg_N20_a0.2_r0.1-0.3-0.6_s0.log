@@ -1,0 +1,4 @@
+[fedavg] round 2/2 acc=1.09 f1=0.12
+done cifar100_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_c290f2f376: acc=1.09 f1=0.12 (88s)
+
+EXIT 0 in 95s

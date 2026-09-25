@@ -1,0 +1,4 @@
+[fedseq] round 2/2 acc=1.00 f1=0.02
+done cifar100_fedseq_N20_a0.2_r0.1-0.3-0.6_s0_2158c920e4: acc=1.00 f1=0.02 (79s)
+
+EXIT 0 in 85s

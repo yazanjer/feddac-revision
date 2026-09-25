@@ -22,3 +22,7 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [6/20] rc=0 pilot_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s0
 [7/20] rc=0 pilot_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s0
 [8/20] rc=0 pilot_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s0
+[9/20] rc=0 pilot_cifar100_feddac_N20_a0.2_r0.1-0.3-0.6_s0
+[10/20] rc=0 pilot_cifar100_fedseq_N20_a0.2_r0.1-0.3-0.6_s0
+[11/20] rc=0 pilot_cifar100_fedavg_N20_a0.2_r0.1-0.3-0.6_s0
+[12/20] rc=0 pilot_cifar100_ppcfl_N20_a0.2_r0.1-0.3-0.6_s0
