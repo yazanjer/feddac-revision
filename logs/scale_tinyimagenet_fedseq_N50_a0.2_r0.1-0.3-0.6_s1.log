@@ -52,6 +52,6 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.11/dist-packages/torch/nn/functional.py", line 2606, in group_norm
     return torch.group_norm(input, num_groups, weight, bias, eps, torch.backends.cudnn.enabled)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 500.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 155.06 MiB is free. Process 813 has 4.11 GiB memory in use. Process 819 has 7.47 GiB memory in use. Process 835 has 7.65 GiB memory in use. Including non-PyTorch memory, this process has 4.15 GiB memory in use. Of the allocated memory 3.75 GiB is allocated by PyTorch, and 71.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 500.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 3.06 MiB is free. Process 813 has 4.11 GiB memory in use. Process 819 has 7.47 GiB memory in use. Process 835 has 7.65 GiB memory in use. Including non-PyTorch memory, this process has 4.30 GiB memory in use. Of the allocated memory 3.88 GiB is allocated by PyTorch, and 90.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
 
-EXIT 1 in 503s
+EXIT 1 in 543s
