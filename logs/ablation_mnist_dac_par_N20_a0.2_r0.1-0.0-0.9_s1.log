@@ -1,0 +1,14 @@
+[dac_par] round 1/50 acc=51.11 f1=42.28
+[dac_par] round 5/50 acc=76.08 f1=69.84
+[dac_par] round 10/50 acc=81.55 f1=76.99
+[dac_par] round 15/50 acc=84.46 f1=80.80
+[dac_par] round 20/50 acc=87.80 f1=85.31
+[dac_par] round 25/50 acc=90.06 f1=88.61
+[dac_par] round 30/50 acc=90.47 f1=89.49
+[dac_par] round 35/50 acc=91.63 f1=90.76
+[dac_par] round 40/50 acc=92.96 f1=92.36
+[dac_par] round 45/50 acc=93.64 f1=93.25
+[dac_par] round 50/50 acc=95.33 f1=95.05
+done mnist_dac_par_N20_a0.2_r0.1-0-0.9_s1_d8102d5b05: acc=95.33 f1=95.05 (499s)
+
+EXIT 0 in 502s
