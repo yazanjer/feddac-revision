@@ -14,3 +14,6 @@ dataset ok cifar10 (50000, 3, 32, 32)
 shard 2/4: 22 jobs, est. cost 204
 dataset ok cifar100 (50000, 3, 32, 32)
 dataset ok tinyimagenet (100000, 3, 64, 64)
+[1/22] rc=0 scale_cifar100_fedavg_N20_a0.2_r0.1-0.3-0.6_s2
+[2/22] rc=0 scale_cifar100_ppcfl_N20_a0.2_r0.1-0.3-0.6_s0
+[3/22] rc=0 scale_cifar100_ppcfl_N20_a0.2_r0.1-0.3-0.6_s4
