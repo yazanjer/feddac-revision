@@ -1,0 +1,13 @@
+[feddac] round 1/10 acc=1.54 f1=0.21
+[feddac] round 2/10 acc=2.53 f1=0.52
+[feddac] round 3/10 acc=5.05 f1=1.09
+[feddac] round 4/10 acc=6.17 f1=2.14
+[feddac] round 5/10 acc=6.05 f1=2.40
+[feddac] round 6/10 acc=7.14 f1=3.26
+[feddac] round 7/10 acc=6.81 f1=3.75
+[feddac] round 8/10 acc=9.04 f1=4.62
+[feddac] round 9/10 acc=10.79 f1=5.99
+[feddac] round 10/10 acc=8.71 f1=5.54
+done cifar100_feddac_N20_a0.2_r0.1-0.3-0.6_s0_c0bf1fc9df: acc=8.71 f1=5.54 (439s)
+
+EXIT 0 in 462s

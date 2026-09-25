@@ -1,11 +1,17 @@
-Traceback (most recent call last):
-  File "/workspace/repo/scripts/run.py", line 134, in <module>
-    main()
-  File "/workspace/repo/scripts/run.py", line 91, in main
-    res, model, caps = run_federated(ds, part, cfg, device, capture_rounds=set(a.ldi_rounds))
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspace/repo/scripts/../feddac/algorithms.py", line 195, in run_federated
-    ev = evaluate(global_model, ds)
+[fedavg] round 1/10 acc=1.00 f1=0.02
+[fedavg] round 2/10 acc=1.97 f1=0.28
+[fedavg] round 3/10 acc=2.73 f1=0.37
+[fedavg] round 4/10 acc=2.54 f1=0.36
+[fedavg] round 5/10 acc=3.36 f1=0.52
+[fedavg] round 6/10 acc=3.73 f1=0.76
+[fedavg] round 7/10 acc=4.54 f1=1.17
+[fedavg] round 8/10 acc=4.51 f1=1.07
+[fedavg] round 9/10 acc=5.51 f1=2.04
+[fedavg] round 10/10 acc=6.17 f1=2.24
+done cifar100_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_9f1c625037: acc=6.17 f1=2.24 (442s)
+
+EXIT 0 in 464s
+l, ds)
          ^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/usr/local/lib/python3.11/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
     return func(*args, **kwargs)
