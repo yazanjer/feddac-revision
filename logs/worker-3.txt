@@ -75,3 +75,9 @@ shard 3/10: 175 jobs, est. cost 396
 [74/175] rc=0 main_mnist_ppcfl_N20_a1.0_r0.1-0.3-0.6_s2
 [75/175] rc=0 main_mnist_fedseq_N20_a1.0_r0.1-0.3-0.6_s2
 [76/175] rc=0 main_mnist_fedavg_N20_a0.2_r0.1-0.0-0.9_s2
+[77/175] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.0-0.9_s2
+[78/175] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.0-0.9_s2
+[79/175] rc=0 main_mnist_fedavg_N20_a0.2_r0.1-0.1-0.8_s2
+[80/175] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.1-0.8_s2
+[81/175] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.1-0.8_s2
+[82/175] rc=0 main_mnist_fedavg_N20_a0.2_r0.1-0.2-0.7_s2
