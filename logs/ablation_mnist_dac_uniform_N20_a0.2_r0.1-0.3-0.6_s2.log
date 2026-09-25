@@ -1,0 +1,14 @@
+[dac_uniform] round 1/50 acc=62.18 f1=56.07
+[dac_uniform] round 5/50 acc=92.51 f1=92.41
+[dac_uniform] round 10/50 acc=95.60 f1=95.55
+[dac_uniform] round 15/50 acc=97.78 f1=97.78
+[dac_uniform] round 20/50 acc=96.70 f1=96.72
+[dac_uniform] round 25/50 acc=98.44 f1=98.44
+[dac_uniform] round 30/50 acc=97.86 f1=97.86
+[dac_uniform] round 35/50 acc=97.94 f1=97.93
+[dac_uniform] round 40/50 acc=98.63 f1=98.62
+[dac_uniform] round 45/50 acc=98.34 f1=98.33
+[dac_uniform] round 50/50 acc=98.58 f1=98.57
+done mnist_dac_uniform_N20_a0.2_r0.1-0.3-0.6_s2_a6e9cce16a: acc=98.58 f1=98.57 (518s)
+
+EXIT 0 in 521s
