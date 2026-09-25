@@ -1,1 +1,4 @@
 [02:44:30] cloned, installing requirements
+[notice] A new release of pip is available: 24.2 -> 26.2.1
+[notice] To update, run: python -m pip install --upgrade pip
+[02:45:31] requirements installed
