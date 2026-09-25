@@ -84,3 +84,7 @@ shard 5/12: 141 jobs, est. cost 325
 [83/141] rc=0 ablation_cifar10_dac_noisyhist_N50_a0.2_r0.1-0.3-0.6_s2_sgd0.02
 [84/141] rc=0 ablation_cifar10_dac_par_N20_a0.2_r0.1-0.0-0.9_s4_sgd0.02
 [85/141] rc=0 ablation_cifar10_dac_noisyhist_N20_a0.2_r0.1-0.0-0.9_s1_sgd0.02
+[86/141] rc=0 main_cifar10_ppcfl_N30_a0.2_r0.1-0.3-0.6_s1_sgd0.02
+[87/141] rc=0 main_cifar10_fedseq_N30_a0.2_r0.1-0.3-0.6_s3_sgd0.02
+[88/141] rc=0 main_cifar10_fedse_N40_a0.2_r0.1-0.3-0.6_s2_sgd0.02
+[89/141] rc=0 main_cifar10_feddac_N40_a0.2_r0.1-0.3-0.6_s4_sgd0.02
