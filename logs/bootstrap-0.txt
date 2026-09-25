@@ -14,3 +14,6 @@ dataset ok cifar10 (50000, 3, 32, 32)
 shard 0/3: 20 jobs, est. cost 50
 dataset ok cifar100 (50000, 3, 32, 32)
 dataset ok tinyimagenet (100000, 3, 64, 64)
+[1/20] rc=0 lrsel_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.01
+[2/20] rc=0 lrsel_cifar10_fedse_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.005
+[3/20] rc=0 lrsel_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.005

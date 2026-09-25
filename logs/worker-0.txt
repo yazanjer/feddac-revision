@@ -1,1 +1,4 @@
 shard 0/3: 20 jobs, est. cost 50
+[1/20] rc=0 lrsel_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.01
+[2/20] rc=0 lrsel_cifar10_fedse_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.005
+[3/20] rc=0 lrsel_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.005
