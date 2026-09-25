@@ -12,3 +12,6 @@ dataset ok mnist (60000, 1, 28, 28)
 dataset ok cifar10 (50000, 3, 32, 32)
 known finished runs: 1955
 [09:13:26] datasets ready, starting worker
+shard 4/12: 141 jobs, est. cost 325
+dataset ok cifar100 (50000, 3, 32, 32)
+dataset ok tinyimagenet (100000, 3, 64, 64)
