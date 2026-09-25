@@ -37,3 +37,7 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [21/174] rc=0 main_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s3
 [22/174] rc=0 dp_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s3_dp4.0
 [23/174] rc=0 main_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s3
+[24/174] rc=0 dp_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s3_dp8.0
+[25/174] rc=0 dp_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s3_dp8.0
+[26/174] rc=0 main_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s3
+[27/174] rc=0 dp_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s3_dp8.0

@@ -1,0 +1,14 @@
+[fedavg] round 1/100 acc=10.00 f1=1.82
+[fedavg] round 10/100 acc=16.07 f1=7.36
+[fedavg] round 20/100 acc=19.22 f1=10.72
+[fedavg] round 30/100 acc=20.89 f1=13.47
+[fedavg] round 40/100 acc=21.32 f1=14.29
+[fedavg] round 50/100 acc=23.17 f1=16.91
+[fedavg] round 60/100 acc=23.01 f1=16.92
+[fedavg] round 70/100 acc=23.24 f1=17.05
+[fedavg] round 80/100 acc=25.72 f1=20.88
+[fedavg] round 90/100 acc=26.32 f1=21.67
+[fedavg] round 100/100 acc=26.62 f1=22.24
+done cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_dp8_s3_9675991fde: acc=26.62 f1=22.24 (1619s)
+
+EXIT 0 in 1621s
