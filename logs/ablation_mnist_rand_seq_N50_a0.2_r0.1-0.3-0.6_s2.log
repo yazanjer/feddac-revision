@@ -1,0 +1,14 @@
+[rand_seq] round 1/50 acc=44.33 f1=36.00
+[rand_seq] round 5/50 acc=96.66 f1=96.63
+[rand_seq] round 10/50 acc=97.83 f1=97.80
+[rand_seq] round 15/50 acc=98.51 f1=98.50
+[rand_seq] round 20/50 acc=97.84 f1=97.85
+[rand_seq] round 25/50 acc=98.59 f1=98.58
+[rand_seq] round 30/50 acc=98.77 f1=98.76
+[rand_seq] round 35/50 acc=98.57 f1=98.56
+[rand_seq] round 40/50 acc=98.53 f1=98.53
+[rand_seq] round 45/50 acc=98.80 f1=98.79
+[rand_seq] round 50/50 acc=98.97 f1=98.96
+done mnist_rand_seq_N50_a0.2_r0.1-0.3-0.6_s2_e000812013: acc=98.97 f1=98.96 (520s)
+
+EXIT 0 in 522s
