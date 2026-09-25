@@ -59,7 +59,7 @@ def local_train(model: nn.Module, ds, idx: torch.Tensor, cfg: dict, prox_ref=Non
     mu = cfg.get("mu", 0.0)
     ref = [p.detach().clone() for p in prox_ref.parameters()] if (mu > 0 and prox_ref is not None) else None
     if dp is not None:
-        _dp_train(model, ds, idx, opt, dp)
+        _dp_train(model, ds, idx, opt, dp, mu=mu, ref=ref)
     else:
         B = cfg.get("batch_size", 10)
         n = idx.numel()
@@ -81,8 +81,11 @@ def local_train(model: nn.Module, ds, idx: torch.Tensor, cfg: dict, prox_ref=Non
     return time.perf_counter() - t0
 
 
-def _dp_train(model, ds, idx, opt, dp):
-    """DP-SGD with Poisson sampling and per-example clipping (torch.func)."""
+def _dp_train(model, ds, idx, opt, dp, mu=0.0, ref=None):
+    """DP-SGD with Poisson sampling and per-example clipping (torch.func).
+
+    The FedProx proximal term does not depend on the data, so its gradient mu*(w - w_ref) is added
+    after clipping and noising (post-processing; no effect on the privacy guarantee)."""
     from torch.func import functional_call, grad, vmap
 
     params = {k: v.detach() for k, v in model.named_parameters()}
@@ -114,6 +117,8 @@ def _dp_train(model, ds, idx, opt, dp):
         for j, p in enumerate(plist):
             noise = torch.normal(0.0, dp.sigma * dp.clip, size=p.shape, device=p.device)
             p.grad = (summed[j] + noise) / dp.batch_size
+            if ref is not None and mu > 0:
+                p.grad = p.grad + mu * (p.detach() - ref[j])
         opt.step()
         opt.zero_grad(set_to_none=True)
 

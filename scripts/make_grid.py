@@ -141,6 +141,18 @@ def lrsel_grid():
     return jobs
 
 
+def dpprox_grid():
+    """Re-run of DP-FedProx after adding the proximal term to the DP-SGD path (tag proxfix)."""
+    jobs = []
+    for d in ("mnist", "cifar10"):
+        for eps in (1.0, 4.0, 8.0):
+            for s in range(5):
+                j = job("dp", 1, dataset=d, method="fedprox", seed=s, dp_eps=eps)
+                j["extra"] = ["--tag", "proxfix"]
+                jobs.append(j)
+    return jobs
+
+
 def to_argv(j):
     a = ["--dataset", j["dataset"], "--method", j["method"], "--clients", str(j["clients"]),
          "--alpha", str(j["alpha"]), "--ratios", *map(str, j["ratios"]), "--seed", str(j["seed"]),
@@ -173,8 +185,8 @@ def pilot():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] in ("pilot", "diag", "scale", "mia", "lrsel"):
-        fn = {"pilot": pilot, "diag": diag, "mia": mia_grid, "lrsel": lrsel_grid,
+    if len(sys.argv) > 1 and sys.argv[1] in ("pilot", "diag", "scale", "mia", "lrsel", "dpprox"):
+        fn = {"pilot": pilot, "diag": diag, "mia": mia_grid, "lrsel": lrsel_grid, "dpprox": dpprox_grid,
               "scale": lambda: scale_grid(["--optimizer", "sgd", "--lr", "0.05"])}[sys.argv[1]]
         with open(f"configs/{sys.argv[1]}.jsonl", "w") as f:
             for j in fn():
