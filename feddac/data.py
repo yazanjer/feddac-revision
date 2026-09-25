@@ -169,6 +169,57 @@ def _tinyimagenet_hf():
     return np.ascontiguousarray(xtr), ytr, np.ascontiguousarray(xte), yte
 
 
+HF = {  # (repo, config, image column, label column, test split)
+    "mnist": ("ylecun/mnist", "mnist", "image", "label", "test"),
+    "cifar10": ("uoft-cs/cifar10", "plain_text", "img", "label", "test"),
+    "cifar100": ("uoft-cs/cifar100", "cifar100", "img", "fine_label", "test"),
+    "tinyimagenet": ("zh-plus/tiny-imagenet", "default", "image", "label", "valid"),
+}
+
+
+def _hf(name):
+    """Fast path: parquet files from the Hugging Face Hub CDN (same data as the original sources)."""
+    import io
+    import json as _json
+    import urllib.request
+    import pyarrow.parquet as pq
+    from PIL import Image
+
+    repo, cfg, icol, lcol, test_split = HF[name]
+    root = os.path.join(DATA_ROOT, "hf", name)
+    os.makedirs(root, exist_ok=True)
+
+    def split(sp):
+        api = f"https://huggingface.co/api/datasets/{repo}/parquet/{cfg}/{sp}"
+        urls = _json.loads(urllib.request.urlopen(api, timeout=60).read())
+        xs, ys = [], []
+        for k, u in enumerate(urls):
+            f = os.path.join(root, f"{sp}-{k}.parquet")
+            if not os.path.exists(f):
+                urllib.request.urlretrieve(u, f + ".part")
+                os.replace(f + ".part", f)
+            t = pq.read_table(f).to_pydict()
+            for im, y in zip(t[icol], t[lcol]):
+                img = Image.open(io.BytesIO(im["bytes"]))
+                img = img.convert("L") if name == "mnist" else img.convert("RGB")
+                a = np.asarray(img, dtype=np.uint8)
+                xs.append(a[None] if a.ndim == 2 else a.transpose(2, 0, 1))
+                ys.append(int(y))
+        return np.ascontiguousarray(np.stack(xs)), np.asarray(ys, dtype=np.int64)
+
+    xtr, ytr = split("train")
+    xte, yte = split(test_split)
+    return xtr, ytr, xte, yte
+
+
+def _download(name):
+    try:
+        return _hf(name)
+    except Exception as e:  # fall back to the original distribution sites
+        print(f"[data] HF download failed for {name} ({e}); falling back", flush=True)
+        return _tinyimagenet() if name == "tinyimagenet" else _torchvision(name)
+
+
 def _synthetic(n_train=6000, n_test=1000, c=10, seed=0):
     """Small learnable synthetic dataset (for CI / smoke tests without internet)."""
     g = np.random.default_rng(seed)
@@ -193,7 +244,7 @@ def load_dataset(name: str, device="cpu") -> TensorDataset:
                 fcntl.flock(lk, fcntl.LOCK_EX)  # one process downloads, the others wait
                 arrs = _from_cache(name)
                 if arrs is None:
-                    arrs = _tinyimagenet() if name == "tinyimagenet" else _torchvision(name)
+                    arrs = _download(name)
                     _save_cache(name, *arrs)
                 fcntl.flock(lk, fcntl.LOCK_UN)
     xtr, ytr, xte, yte = arrs
