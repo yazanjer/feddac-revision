@@ -29,3 +29,6 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [13/20] rc=0 pilot_tinyimagenet_feddac_N20_a0.2_r0.1-0.3-0.6_s0
 [14/20] rc=0 pilot_tinyimagenet_fedavg_N20_a0.2_r0.1-0.3-0.6_s0
 [15/20] rc=0 pilot_tinyimagenet_fedseq_N20_a0.2_r0.1-0.3-0.6_s0
+[16/20] rc=0 pilot_tinyimagenet_ppcfl_N20_a0.2_r0.1-0.3-0.6_s0
+[17/20] rc=0 pilot_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s0_dp4.0
+[18/20] rc=0 pilot_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_dp4.0

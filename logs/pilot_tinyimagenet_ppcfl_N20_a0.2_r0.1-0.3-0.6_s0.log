@@ -1,2 +1,4 @@
 [ppcfl] round 1/1 acc=0.50 f1=0.00
 done tinyimagenet_ppcfl_N20_a0.2_r0.1-0.3-0.6_s0_ac6813381a: acc=0.50 f1=0.00 (93s)
+
+EXIT 0 in 102s
