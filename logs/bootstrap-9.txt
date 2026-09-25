@@ -97,3 +97,19 @@ shard 9/12: 146 jobs, est. cost 326
 [31/146] rc=0 ablation_mnist_rand_seq_N20_a0.2_r0.1-0.0-0.9_s4
 [32/146] rc=0 ablation_mnist_dac_samplew_N20_a0.2_r0.1-0.0-0.9_s1
 dataset ok tinyimagenet (100000, 3, 64, 64)
+[33/146] rc=0 main_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.02
+[34/146] rc=0 main_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s2_sgd0.02
+[35/146] rc=0 main_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s4_sgd0.02
+[36/146] rc=0 ablation_cifar10_rand_seq_N20_a0.2_r0.1-0.3-0.6_s3_sgd0.02
+[37/146] rc=0 ablation_cifar10_dac_samplew_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.02
+[38/146] rc=0 main_mnist_fedavg_N30_a0.2_r0.1-0.3-0.6_s0
+[39/146] rc=0 main_mnist_fedprox_N30_a0.2_r0.1-0.3-0.6_s4
+[40/146] rc=0 main_mnist_fedse_N30_a0.2_r0.1-0.3-0.6_s3
+[41/146] rc=0 main_mnist_fedavg_N40_a0.2_r0.1-0.3-0.6_s0
+[42/146] rc=0 main_mnist_ppcfl_N40_a0.2_r0.1-0.3-0.6_s2
+[43/146] rc=0 main_mnist_fedseq_N40_a0.2_r0.1-0.3-0.6_s4
+[44/146] rc=0 main_mnist_fedprox_N50_a0.2_r0.1-0.3-0.6_s1
+[45/146] rc=0 main_mnist_fedse_N50_a0.2_r0.1-0.3-0.6_s3
+[46/146] rc=0 main_mnist_fedavg_N60_a0.2_r0.1-0.3-0.6_s0
+[47/146] rc=0 main_mnist_ppcfl_N60_a0.2_r0.1-0.3-0.6_s2
+[48/146] rc=0 main_mnist_fedseq_N60_a0.2_r0.1-0.3-0.6_s4
