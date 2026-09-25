@@ -21,18 +21,10 @@ pip install -q -r requirements.txt 2>&1 | tail -2
 hb "requirements installed"
 python scripts/make_grid.py && python scripts/make_grid.py pilot
 nvidia-smi --query-gpu=name,memory.total --format=csv; nproc; free -g | head -2
-# pre-download datasets once (avoid races between concurrent processes)
-python - <<'PY'
-import json, torch
-from feddac.data import load_dataset
-import os
-need = {json.loads(l)["dataset"] for l in open(os.environ.get("JOBS", "configs/jobs.jsonl"))}
-for d in sorted(need):
-    try:
-        ds = load_dataset(d, "cpu"); print("dataset ok", d, tuple(ds.x_train.shape))
-    except Exception as e:
-        print("dataset FAILED", d, e)
-PY
+# pre-download the small datasets now; the large ones load in the background (file-locked)
+prep() { python -c "from feddac.data import load_dataset as l; d=l('$1','cpu'); print('dataset ok','$1',tuple(d.x_train.shape))" || echo "dataset FAILED $1"; }
+prep mnist; prep cifar10
+(prep cifar100; prep tinyimagenet) &
 hb "datasets ready, starting worker"
 python scripts/worker.py --jobs "${JOBS:-configs/jobs.jsonl}" --sync_every "${SYNC:-600}" --shard "$POD_INDEX" --num_shards "$NUM_SHARDS" --procs "${PROCS:-4}" --branch "$BR" 2>&1 | tee -a "logs/worker-${POD_INDEX}.txt"
 git add -A results logs; git commit -qm "pod ${POD_INDEX}: final"; git push -q origin "HEAD:$BR"

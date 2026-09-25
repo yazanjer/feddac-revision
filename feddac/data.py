@@ -187,8 +187,15 @@ def load_dataset(name: str, device="cpu") -> TensorDataset:
     else:
         arrs = _from_cache(name)
         if arrs is None:
-            arrs = _tinyimagenet() if name == "tinyimagenet" else _torchvision(name)
-            _save_cache(name, *arrs)
+            import fcntl
+            os.makedirs(DATA_ROOT, exist_ok=True)
+            with open(os.path.join(DATA_ROOT, f"{name}.lock"), "w") as lk:
+                fcntl.flock(lk, fcntl.LOCK_EX)  # one process downloads, the others wait
+                arrs = _from_cache(name)
+                if arrs is None:
+                    arrs = _tinyimagenet() if name == "tinyimagenet" else _torchvision(name)
+                    _save_cache(name, *arrs)
+                fcntl.flock(lk, fcntl.LOCK_UN)
     xtr, ytr, xte, yte = arrs
     ds = TensorDataset(name, torch.from_numpy(xtr), torch.from_numpy(ytr), torch.from_numpy(xte),
                        torch.from_numpy(yte), NUM_CLASSES[name],
