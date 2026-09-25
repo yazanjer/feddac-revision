@@ -86,3 +86,7 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [43/175] rc=0 main_mnist_fedavg_N30_a0.2_r0.1-0.3-0.6_s4
 [44/175] rc=0 main_mnist_fedse_N30_a0.2_r0.1-0.3-0.6_s1
 [45/175] rc=0 ablation_cifar10_dac_par_N20_a0.2_r0.1-0.0-0.9_s4
+[46/175] rc=0 main_mnist_fedprox_N30_a0.2_r0.1-0.3-0.6_s4
+[47/175] rc=0 ablation_cifar10_dac_samplew_N20_a0.2_r0.1-0.0-0.9_s4
+[48/175] rc=0 main_mnist_feddac_N30_a0.2_r0.1-0.3-0.6_s1
+[49/175] rc=0 main_mnist_fedse_N40_a0.2_r0.1-0.3-0.6_s1
