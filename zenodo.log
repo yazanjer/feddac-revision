@@ -1,0 +1,57 @@
+started Fri Sep 25 18:55:09 UTC 2026 token_len=60
++ git fetch -q origin '+refs/heads/results/*:refs/remotes/origin/results/*' '+refs/heads/models:refs/remotes/origin/models'
+merged result files: 2177
++ /usr/bin/python scripts/aggregate.py --results /tmp/zb_work/results --out /tmp/zb_work/paper_assets
+2197 runs loaded
+written to /tmp/zb_work/paper_assets
++ /usr/bin/python scripts/package_zenodo.py --results /tmp/zb_work/results --logs /tmp/zb_work/logs --assets /tmp/zb_work/paper_assets --out /tmp/zb_work/bundle
+bundle written to /tmp/zb_work/bundle models: 0
++ git archive refs/remotes/origin/models | tar -x -C /tmp/zb_work/mparts
+models: 72
+uploading feddac-code-v1.0.0.zip 55250
+uploading feddac-models-v1.0.0.zip 469498160
+uploading feddac-paper-assets-v1.0.0.zip 108084
+uploading feddac-results-v1.0.0.zip 10903325
+uploading README.md 827
+uploading CHECKSUMS.sha256 369
+{
+ "deposition_id": 22965988,
+ "state": "unsubmitted",
+ "submitted": false,
+ "html": "https://zenodo.org/deposit/22965988",
+ "reserved_doi": "10.5281/zenodo.22965988",
+ "files": {
+  "feddac-code-v1.0.0.zip": {
+   "size": 55250,
+   "zenodo_checksum": "md5:9539a1e4f02490d4ed283c3c03e71da8",
+   "sha256": "6de5766406ae54d398b80807c7cc07c5502273175252d16488e54cca3c7cbe92"
+  },
+  "feddac-models-v1.0.0.zip": {
+   "size": 469498160,
+   "zenodo_checksum": "md5:aa88eaa61607b8ab6fd30eb75ce0f241",
+   "sha256": "0dc49193c548f8e4e8f5a4761df686e787eb84af40fcf347efc3be12c190e311"
+  },
+  "feddac-paper-assets-v1.0.0.zip": {
+   "size": 108084,
+   "zenodo_checksum": "md5:02ad4fc763434ce4c164c2ffcca78667",
+   "sha256": "8b9e5be4fded7673f1f2b21b8da1f202c5e87043939da9b00e9960334a6012ea"
+  },
+  "feddac-results-v1.0.0.zip": {
+   "size": 10903325,
+   "zenodo_checksum": "md5:19c4ecef61119177d3102ba021694ddb",
+   "sha256": "494b1894edf65cbcf18aa19e6a5ec123f3e39a224448dc8ed5a389d632c88369"
+  },
+  "README.md": {
+   "size": 827,
+   "zenodo_checksum": "md5:eeecec15a66787789996d3db249fddc5",
+   "sha256": "b0724a9f44f9153f38ca30fe6c0b1094bf8e86efc46de44e152dac37f6ff5ce2"
+  },
+  "CHECKSUMS.sha256": {
+   "size": 369,
+   "zenodo_checksum": "md5:9657660fc780014e7fb2aa3ac4767b74",
+   "sha256": "3e0c98a54f75453861bdf656c7f04dbf8f2a153a4f6ac81b46262945e843ff6b"
+  }
+ },
+ "models": 72
+}
+EXIT 0
