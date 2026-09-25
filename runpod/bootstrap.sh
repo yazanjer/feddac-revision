@@ -26,7 +26,7 @@ prep() { python -c "from feddac.data import load_dataset as l; d=l('$1','cpu'); 
 prep mnist; prep cifar10
 (prep cifar100; prep tinyimagenet) &
 hb "datasets ready, starting worker"
-python scripts/worker.py --jobs "${JOBS:-configs/jobs.jsonl}" --sync_every "${SYNC:-600}" --shard "$POD_INDEX" --num_shards "$NUM_SHARDS" --procs "${PROCS:-4}" --branch "$BR" 2>&1 | tee -a "logs/worker-${POD_INDEX}.txt"
+python scripts/worker.py --jobs "${JOBS:-configs/jobs.jsonl}" --sync_every "${SYNC:-600}" --shard "$POD_INDEX" --num_shards "$NUM_SHARDS" --procs "${PROCS:-4}" --branch "$BR" ${REVERSE:+--reverse} 2>&1 | tee -a "logs/worker-${POD_INDEX}.txt"
 git add -A results logs; git commit -qm "pod ${POD_INDEX}: final"; git push -q origin "HEAD:$BR"
 # self-terminate to stop billing (runpodctl is pre-installed on RunPod images)
 if [ "${AUTO_REMOVE:-1}" = "1" ] && command -v runpodctl >/dev/null; then runpodctl remove pod "$RUNPOD_POD_ID"; fi

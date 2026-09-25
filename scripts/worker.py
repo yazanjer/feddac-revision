@@ -61,6 +61,7 @@ def main():
     p.add_argument("--sync_every", type=int, default=600)
     p.add_argument("--no_git", action="store_true")
     p.add_argument("--branch", default=None)
+    p.add_argument("--reverse", action="store_true", help="process this shard's jobs from the end (helper pods)")
     a = p.parse_args()
     jobs = [json.loads(l) for l in open(a.jobs)]
     mine, load = shard_jobs(jobs, a.shard, a.num_shards)
@@ -68,7 +69,7 @@ def main():
     branch = a.branch or f"results/pod-{a.shard}"
     os.makedirs("logs", exist_ok=True)
     lock = threading.Lock()
-    queue = list(mine)
+    queue = list(reversed(mine)) if a.reverse else list(mine)
     qlock = threading.Lock()
     done = [0]
 
