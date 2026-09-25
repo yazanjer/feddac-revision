@@ -25,3 +25,6 @@ shard 0/2: 30 jobs, est. cost 80
 [18/30] rc=0 mia_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s0
 [19/30] rc=0 mia_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s2
 [20/30] rc=0 mia_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s1
+[21/30] rc=0 mia_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s0
+[22/30] rc=0 mia_cifar10_fedse_N20_a0.2_r0.1-0.3-0.6_s1
+[23/30] rc=0 mia_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s2
