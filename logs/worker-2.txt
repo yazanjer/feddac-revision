@@ -118,3 +118,4 @@ shard 2/12: 141 jobs, est. cost 325
 [117/141] rc=0 main_cifar10_fedavg_N20_a0.2_r0.1-0.4-0.5_s2_sgd0.02
 [118/141] rc=0 main_cifar10_ppcfl_N20_a0.2_r0.1-0.4-0.5_s4_sgd0.02
 [119/141] rc=0 main_cifar10_feddac_N20_a0.2_r0.1-0.4-0.5_s1_sgd0.02
+[120/141] rc=0 main_cifar10_fedprox_N20_a0.2_r0.1-0.2-0.7_s3_sgd0.02
