@@ -1,0 +1,14 @@
+[fedprox] round 1/50 acc=48.56 f1=44.06
+[fedprox] round 5/50 acc=94.20 f1=94.08
+[fedprox] round 10/50 acc=96.64 f1=96.59
+[fedprox] round 15/50 acc=97.57 f1=97.54
+[fedprox] round 20/50 acc=98.02 f1=97.99
+[fedprox] round 25/50 acc=98.32 f1=98.29
+[fedprox] round 30/50 acc=98.41 f1=98.38
+[fedprox] round 35/50 acc=98.46 f1=98.44
+[fedprox] round 40/50 acc=98.58 f1=98.56
+[fedprox] round 45/50 acc=98.56 f1=98.54
+[fedprox] round 50/50 acc=98.72 f1=98.71
+done mnist_fedprox_N20_a0.3_r0.1-0.3-0.6_s0_15bb08ddcd: acc=98.72 f1=98.71 (1230s)
+
+EXIT 0 in 1233s
