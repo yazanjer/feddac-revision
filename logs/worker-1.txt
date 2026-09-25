@@ -1,3 +1,6 @@
 shard 1/2: 30 jobs, est. cost 88
 [1/30] rc=0 mia_mnist_ppcfl_N20_a0.2_r0.1-0.3-0.6_s1
 [2/30] rc=0 mia_mnist_fedavg_N20_a0.2_r0.1-0.3-0.6_s1
+[3/30] rc=0 mia_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s2
+[4/30] rc=0 mia_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s0
+[5/30] rc=0 mia_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s0
