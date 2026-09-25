@@ -1,0 +1,5 @@
+[ppcfl] round 30/60 acc=3.37 f1=1.48
+[ppcfl] round 60/60 acc=8.02 f1=5.27
+done tinyimagenet_ppcfl_N50_a0.2_r0.1-0.3-0.6_s3_3ea5ee4fbc: acc=8.02 f1=5.27 (4131s)
+
+EXIT 0 in 4179s
