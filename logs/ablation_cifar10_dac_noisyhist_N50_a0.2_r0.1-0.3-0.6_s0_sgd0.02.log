@@ -1,0 +1,14 @@
+[dac_noisyhist] round 1/100 acc=23.44 f1=14.31
+[dac_noisyhist] round 10/100 acc=59.51 f1=58.75
+[dac_noisyhist] round 20/100 acc=62.06 f1=60.35
+[dac_noisyhist] round 30/100 acc=61.09 f1=60.52
+[dac_noisyhist] round 40/100 acc=62.01 f1=61.04
+[dac_noisyhist] round 50/100 acc=59.92 f1=58.33
+[dac_noisyhist] round 60/100 acc=63.05 f1=62.75
+[dac_noisyhist] round 70/100 acc=66.91 f1=66.17
+[dac_noisyhist] round 80/100 acc=67.63 f1=66.63
+[dac_noisyhist] round 90/100 acc=67.01 f1=66.55
+[dac_noisyhist] round 100/100 acc=67.45 f1=66.61
+done cifar10_dac_noisyhist_N50_a0.2_r0.1-0.3-0.6_s0_9c3448c2dd: acc=67.45 f1=66.61 (809s)
+
+EXIT 0 in 812s
