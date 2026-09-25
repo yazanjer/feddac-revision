@@ -1,18 +1,3 @@
-/usr/local/lib/python3.11/dist-packages/torch/cuda/__init__.py:128: UserWarning: CUDA initialization: CUDA unknown error - this may be due to an incorrectly set up environment, e.g. changing env variable CUDA_VISIBLE_DEVICES after program start. Setting the available devices to be zero. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
-  return torch._C._cuda_getDeviceCount() > 0
-/usr/local/lib/python3.11/dist-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
-  warnings.warn(
-[fedse] round 1/50 acc=19.84 f1=9.99
-[fedse] round 5/50 acc=48.36 f1=42.89
-[fedse] round 10/50 acc=75.42 f1=70.63
-[fedse] round 15/50 acc=80.29 f1=76.43
-[fedse] round 20/50 acc=81.22 f1=77.72
-[fedse] round 25/50 acc=79.05 f1=75.38
-[fedse] round 30/50 acc=79.57 f1=76.15
-[fedse] round 35/50 acc=82.19 f1=78.80
-[fedse] round 40/50 acc=80.91 f1=77.17
-[fedse] round 45/50 acc=82.08 f1=81.38
-[fedse] round 50/50 acc=83.43 f1=81.75
-done mnist_fedse_N20_a0.2_r0.1-0.3-0.6_dp1_s4_2a45891429: acc=83.43 f1=81.75 (1061s)
+exists, skipping results/dp/mnist_fedse_N20_a0.2_r0.1-0.3-0.6_dp1_s4_2a45891429.json
 
-EXIT 0 in 1063s
+EXIT 0 in 2s

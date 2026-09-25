@@ -38,3 +38,18 @@ Mem:            1007          72         419           0         515         925
 dataset ok mnist (60000, 1, 28, 28)
 dataset ok cifar10 (50000, 3, 32, 32)
 [02:37:57] datasets ready, starting worker
+shard 7/10: 175 jobs, est. cost 396
+[1/175] rc=0 attack_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s0_dp4.0_atk
+[2/175] rc=0 attack_mnist_ppcfl_N20_a0.2_r0.1-0.3-0.6_s1_atk
+[3/175] rc=0 attack_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s2_atk
+[4/175] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s4_dp1.0
+[5/175] rc=0 dp_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s4_dp1.0
+[6/175] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s4_dp4.0
+[7/175] rc=0 dp_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s4_dp1.0
+[8/175] rc=0 dp_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s4_dp4.0
+[9/175] rc=0 dp_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s4_dp4.0
+[10/175] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s4_dp8.0
+[11/175] rc=0 dp_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s4_dp8.0
+dataset ok cifar100 (50000, 3, 32, 32)
+dataset ok tinyimagenet (100000, 3, 64, 64)
+[12/175] rc=0 dp_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s4_dp8.0
