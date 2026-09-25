@@ -46,7 +46,10 @@ def git_sync(branch, msg, lock):
                 ["git", "commit", "-q", "-m", msg],
                 ["git", "push", "-q", "origin", f"HEAD:{branch}"]]
         for c in cmds:
-            subprocess.run(c, capture_output=True)
+            try:
+                subprocess.run(c, capture_output=True, timeout=180)
+            except subprocess.TimeoutExpired:
+                print("git step timed out:", c[1], flush=True)
 
 
 def main():
