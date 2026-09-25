@@ -7,3 +7,4 @@ shard 2/4: 22 jobs, est. cost 204
 [6/22] rc=0 scale_cifar100_fedseq_N20_a0.2_r0.1-0.3-0.6_s2
 [7/22] rc=0 scale_cifar100_feddac_N20_a0.2_r0.1-0.3-0.6_s1
 [8/22] rc=1 scale_cifar100_fedprox_N50_a0.2_r0.1-0.3-0.6_s3
+[9/22] rc=0 scale_cifar100_fedavg_N50_a0.2_r0.1-0.3-0.6_s0
