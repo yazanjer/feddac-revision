@@ -7,6 +7,7 @@ cd /workspace/repo
 git config user.name "feddac-runner"; git config user.email "runner@feddac.invalid"
 export FEDDAC_DATA=/workspace/data
 if [ "${MODE:-}" = "collect" ]; then bash scripts/collect.sh; sleep infinity; fi
+if [ "${MODE:-}" = "zenodo" ]; then bash runpod/zenodo_job.sh; sleep infinity; fi
 if [ "${MODE:-}" = "models" ]; then bash scripts/collect_models.sh 2>&1 | tee /tmp/models.log; sleep infinity; fi
 BR="results/${BRANCH:-pod-$POD_INDEX}"
 # resume: if this shard already pushed results, continue from them
