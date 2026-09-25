@@ -87,3 +87,8 @@ shard 7/12: 148 jobs, est. cost 327
 [86/148] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.9-0.0_s0
 [87/148] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.9-0.0_s2
 [88/148] rc=0 main_mnist_fedavg_N20_a0.2_r0.1-0.6-0.3_s4
+[89/148] rc=0 main_mnist_fedse_N20_a0.2_r0.1-0.6-0.3_s1
+[90/148] rc=0 main_mnist_fedavg_N20_a0.2_r0.1-0.8-0.1_s4
+[91/148] rc=0 main_mnist_fedse_N20_a0.2_r0.1-0.8-0.1_s1
+[92/148] rc=0 main_cifar10_fedavg_N30_a0.2_r0.1-0.3-0.6_s4_sgd0.02
+[93/148] rc=0 main_cifar10_fedse_N30_a0.2_r0.1-0.3-0.6_s1_sgd0.02
