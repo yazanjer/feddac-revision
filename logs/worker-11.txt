@@ -88,3 +88,6 @@ shard 11/12: 146 jobs, est. cost 326
 [87/146] rc=0 main_mnist_feddac_N20_a0.2_r0.1-0.6-0.3_s1
 [88/146] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.8-0.1_s4
 [89/146] rc=0 main_mnist_feddac_N20_a0.2_r0.1-0.8-0.1_s1
+[90/146] rc=0 main_cifar10_fedavg_N30_a0.2_r0.1-0.3-0.6_s2_sgd0.02
+[91/146] rc=0 main_cifar10_ppcfl_N30_a0.2_r0.1-0.3-0.6_s4_sgd0.02
+[92/146] rc=0 main_cifar10_feddac_N30_a0.2_r0.1-0.3-0.6_s1_sgd0.02
