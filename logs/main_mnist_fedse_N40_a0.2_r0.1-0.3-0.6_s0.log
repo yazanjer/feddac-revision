@@ -1,0 +1,14 @@
+[fedse] round 1/50 acc=50.92 f1=47.84
+[fedse] round 5/50 acc=94.80 f1=94.70
+[fedse] round 10/50 acc=97.61 f1=97.59
+[fedse] round 15/50 acc=97.22 f1=97.17
+[fedse] round 20/50 acc=97.26 f1=97.26
+[fedse] round 25/50 acc=98.19 f1=98.17
+[fedse] round 30/50 acc=98.59 f1=98.59
+[fedse] round 35/50 acc=98.73 f1=98.71
+[fedse] round 40/50 acc=98.65 f1=98.63
+[fedse] round 45/50 acc=99.03 f1=99.02
+[fedse] round 50/50 acc=98.71 f1=98.69
+done mnist_fedse_N40_a0.2_r0.1-0.3-0.6_s0_4090d74a64: acc=98.71 f1=98.69 (671s)
+
+EXIT 0 in 673s
