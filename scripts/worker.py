@@ -80,8 +80,9 @@ def main():
                     return
                 j = queue.pop(0)
             argv = [sys.executable, "scripts/run.py"] + to_argv(j)
+            tag = next((j["extra"][i + 1] for i, x in enumerate(j.get("extra", [])) if x == "--tag"), "")
             name = (f"{j['exp']}_{j['dataset']}_{j['method']}_N{j['clients']}_a{j['alpha']}_r"
-                    + "-".join(str(x) for x in j["ratios"]) + f"_s{j['seed']}"
+                    + "-".join(str(x) for x in j["ratios"]) + f"_s{j['seed']}" + (f"_{tag}" if tag else "")
                     + (f"_dp{j['dp_eps']}" if j.get("dp_eps") else "") + ("_atk" if j.get("ldi_rounds") else ""))
             with open(f"logs/{name}.log", "w") as lf:
                 t0 = time.time()

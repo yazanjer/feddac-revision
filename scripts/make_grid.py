@@ -117,6 +117,18 @@ def mia_grid():
     return jobs
 
 
+def lrsel_grid():
+    """CIFAR-10 learning-rate selection for plain SGD (per method), default setting, 2 seeds."""
+    jobs = []
+    for lr in (0.005, 0.01, 0.02, 0.05, 0.1):
+        for m in BASE:
+            for s in range(2):
+                j = job("lrsel", 0, dataset="cifar10", method=m, seed=s)
+                j["extra"] = ["--optimizer", "sgd", "--lr", str(lr), "--tag", f"sgd{lr}"]
+                jobs.append(j)
+    return jobs
+
+
 def to_argv(j):
     a = ["--dataset", j["dataset"], "--method", j["method"], "--clients", str(j["clients"]),
          "--alpha", str(j["alpha"]), "--ratios", *map(str, j["ratios"]), "--seed", str(j["seed"]),
@@ -149,8 +161,8 @@ def pilot():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] in ("pilot", "diag", "scale", "mia"):
-        fn = {"pilot": pilot, "diag": diag, "mia": mia_grid,
+    if len(sys.argv) > 1 and sys.argv[1] in ("pilot", "diag", "scale", "mia", "lrsel"):
+        fn = {"pilot": pilot, "diag": diag, "mia": mia_grid, "lrsel": lrsel_grid,
               "scale": lambda: scale_grid(["--optimizer", "sgd", "--lr", "0.05"])}[sys.argv[1]]
         with open(f"configs/{sys.argv[1]}.jsonl", "w") as f:
             for j in fn():
