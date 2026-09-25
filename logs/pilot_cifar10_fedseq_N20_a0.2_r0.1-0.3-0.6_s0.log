@@ -1,0 +1,6 @@
+[fedseq] round 1/3 acc=10.02 f1=1.86
+[fedseq] round 2/3 acc=23.22 f1=15.29
+[fedseq] round 3/3 acc=18.52 f1=9.73
+done cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s0_66410c5552: acc=18.52 f1=9.73 (47s)
+
+EXIT 0 in 54s

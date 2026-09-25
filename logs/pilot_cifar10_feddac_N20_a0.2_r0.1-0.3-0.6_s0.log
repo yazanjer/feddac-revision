@@ -1,0 +1,6 @@
+[feddac] round 1/3 acc=10.02 f1=1.86
+[feddac] round 2/3 acc=19.88 f1=16.03
+[feddac] round 3/3 acc=23.15 f1=12.33
+done cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s0_21ea87e95e: acc=23.15 f1=12.33 (47s)
+
+EXIT 0 in 54s

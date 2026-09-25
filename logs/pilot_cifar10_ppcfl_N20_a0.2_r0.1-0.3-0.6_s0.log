@@ -1,0 +1,6 @@
+[ppcfl] round 1/3 acc=17.61 f1=6.15
+[ppcfl] round 2/3 acc=23.63 f1=14.11
+[ppcfl] round 3/3 acc=28.71 f1=20.43
+done cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s0_364e66f83f: acc=28.71 f1=20.43 (48s)
+
+EXIT 0 in 54s

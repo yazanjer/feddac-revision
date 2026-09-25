@@ -1,0 +1,6 @@
+[fedavg] round 1/3 acc=17.69 f1=6.22
+[fedavg] round 2/3 acc=25.00 f1=15.60
+[fedavg] round 3/3 acc=28.88 f1=20.23
+done cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_346e9fda68: acc=28.88 f1=20.23 (47s)
+
+EXIT 0 in 53s
