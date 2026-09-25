@@ -11,3 +11,6 @@ shard 3/10: 175 jobs, est. cost 396
 [10/175] rc=0 dp_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s0_dp4.0
 [11/175] rc=0 attack_cifar10_fedprox_N20_a0.2_r0.1-0.3-0.6_s0_atk
 [12/175] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s0_dp8.0
+[13/175] rc=0 dp_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s0_dp8.0
+[14/175] rc=0 attack_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s2_dp4.0_atk
+[15/175] rc=0 dp_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s0_dp8.0
