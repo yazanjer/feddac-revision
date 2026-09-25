@@ -12,7 +12,8 @@ distribution (half of the test split, disjoint from the evaluation half).
    Reported: Jensen-Shannon divergence between the inferred and the true histogram of each target
    client (lower = more leakage) and the gain over the non-informative prior (the population mean
    histogram), plus top-1 (majority-class) recovery rate.
-2. Membership inference (MIA) - loss-threshold attack (Yeom et al., 2018) on (a) the final global
+2. Membership inference (MIA) - loss-threshold attack (Yeom et al., 2018), with class-matched
+   non-members, on (a) the final global
    model and (b) the last-round release unit (client model for parallel methods, cluster model for
    sequential ones).  Reported: ROC-AUC and TPR at 1% FPR.
 """
@@ -125,9 +126,16 @@ def mia(model_or_state, ds, member_idx: np.ndarray, device, rng, n=500, n_aux_fr
     else:
         m = model_or_state
     k = min(n, len(member_idx))
-    mem = torch.as_tensor(rng.choice(member_idx, k, replace=False), device=device)
+    mem_np = rng.choice(member_idx, k, replace=False)
+    mem = torch.as_tensor(mem_np, device=device)
     start = int(ds.y_test.numel() * n_aux_frac)
-    non = torch.as_tensor(rng.choice(np.arange(start, ds.y_test.numel()), k, replace=False), device=device)
+    # non-members are drawn with the SAME label distribution as the members (class-matched), so
+    # that the attack measures membership rather than the client's label skew
+    yte = ds.y_test[start:].cpu().numpy()
+    by_cls = {c: np.where(yte == c)[0] + start for c in np.unique(yte)}
+    ymem = ds.y_train[mem].cpu().numpy()
+    non_np = np.array([rng.choice(by_cls[c]) for c in ymem])
+    non = torch.as_tensor(non_np, device=device)
     lm = per_sample_loss(m, ds, ds.x_train[mem], ds.y_train[mem]).cpu().numpy()
     ln = per_sample_loss(m, ds, ds.x_test[non], ds.y_test[non]).cpu().numpy()
     y = np.r_[np.ones(k), np.zeros(k)]

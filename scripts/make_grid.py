@@ -104,6 +104,19 @@ def diag():
     return P
 
 
+def mia_grid():
+    """Membership inference with class-matched non-members (supersedes the MIA part of E6)."""
+    jobs = []
+    for d in ("mnist", "cifar10"):
+        for m in BASE + ["rand_seq"]:
+            for s in range(3):
+                jobs.append(job("mia", 0, dataset=d, method=m, seed=s, mia=True))
+        for m in ("fedavg", "feddac", "fedse"):
+            for s in range(3):
+                jobs.append(job("mia", 0, dataset=d, method=m, seed=s, dp_eps=4.0, mia=True))
+    return jobs
+
+
 def to_argv(j):
     a = ["--dataset", j["dataset"], "--method", j["method"], "--clients", str(j["clients"]),
          "--alpha", str(j["alpha"]), "--ratios", *map(str, j["ratios"]), "--seed", str(j["seed"]),
@@ -136,8 +149,8 @@ def pilot():
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] in ("pilot", "diag", "scale"):
-        fn = {"pilot": pilot, "diag": diag,
+    if len(sys.argv) > 1 and sys.argv[1] in ("pilot", "diag", "scale", "mia"):
+        fn = {"pilot": pilot, "diag": diag, "mia": mia_grid,
               "scale": lambda: scale_grid(["--optimizer", "sgd", "--lr", "0.05"])}[sys.argv[1]]
         with open(f"configs/{sys.argv[1]}.jsonl", "w") as f:
             for j in fn():
