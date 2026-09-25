@@ -58,3 +58,22 @@ def progress():
 def branch_zip_url(ref):
     r, e = q(run_composio_tool, "GITHUB_DOWNLOAD_A_REPOSITORY_ARCHIVE_ZIP", dict(REPO, ref=ref))
     d = r["data"]; return (d.get("headers") or d["data"]["headers"])["location"]
+def make_snapshot():
+    """Merge result JSONs + worker logs of all results/* branches into one zip committed to branch 'snapshots'."""
+    bs = [b for b in branches() if b.startswith("results/") and not any(x in b for x in ("pilot", "diag"))]
+    seen, n = set(), 0
+    with zipfile.ZipFile("/tmp/snapshot.zip", "w", zipfile.ZIP_DEFLATED) as out:
+        for b in bs:
+            p = f"/tmp/{b.replace('/', '_')}.zip"
+            urllib.request.urlretrieve(branch_zip_url(b), p)
+            z = zipfile.ZipFile(p)
+            for nm in z.namelist():
+                rel = nm.split("/", 1)[1] if "/" in nm else nm
+                if rel.startswith("results/") and rel.endswith(".json") and rel not in seen:
+                    seen.add(rel); out.writestr(rel, z.read(nm)); n += 1
+                elif rel.startswith("logs/") and rel.endswith(".txt"):
+                    out.writestr(f"logs/{b.split('/')[1]}/{rel[5:]}", z.read(nm))
+    b64 = base64.b64encode(open("/tmp/snapshot.zip", "rb").read()).decode()
+    q(run_composio_tool, "GITHUB_COMMIT_MULTIPLE_FILES", dict(REPO, branch="snapshots", message=f"snapshot {n} runs",
+      upserts=[{"path": "snapshot.zip", "content": b64, "encoding": "base64"}]))
+    return n, os.path.getsize("/tmp/snapshot.zip"), branch_zip_url("snapshots")
