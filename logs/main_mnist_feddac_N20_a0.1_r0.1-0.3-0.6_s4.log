@@ -1,0 +1,14 @@
+[feddac] round 1/50 acc=48.59 f1=41.94
+[feddac] round 5/50 acc=85.22 f1=83.79
+[feddac] round 10/50 acc=88.83 f1=88.54
+[feddac] round 15/50 acc=96.14 f1=96.05
+[feddac] round 20/50 acc=97.65 f1=97.62
+[feddac] round 25/50 acc=95.75 f1=95.75
+[feddac] round 30/50 acc=96.93 f1=96.85
+[feddac] round 35/50 acc=97.19 f1=97.18
+[feddac] round 40/50 acc=98.29 f1=98.29
+[feddac] round 45/50 acc=95.73 f1=95.72
+[feddac] round 50/50 acc=97.75 f1=97.75
+done mnist_feddac_N20_a0.1_r0.1-0.3-0.6_s4_8bb92e1af3: acc=97.75 f1=97.75 (493s)
+
+EXIT 0 in 495s
