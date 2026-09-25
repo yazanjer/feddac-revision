@@ -37,3 +37,4 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [21/23] rc=0 scale_tinyimagenet_fedavg_N50_a0.2_r0.1-0.3-0.6_s0
 [22/23] rc=0 scale_tinyimagenet_fedavg_N50_a0.2_r0.1-0.3-0.6_s4
 [23/23] rc=0 scale_tinyimagenet_fedse_N50_a0.2_r0.1-0.3-0.6_s1
+ALL DONE
