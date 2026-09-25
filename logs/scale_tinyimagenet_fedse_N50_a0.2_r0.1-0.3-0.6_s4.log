@@ -1,0 +1,5 @@
+[fedse] round 30/60 acc=19.53 f1=16.32
+[fedse] round 60/60 acc=30.01 f1=28.29
+done tinyimagenet_fedse_N50_a0.2_r0.1-0.3-0.6_s4_ebe70423e0: acc=30.01 f1=28.29 (4271s)
+
+EXIT 0 in 4277s
