@@ -1,0 +1,9 @@
+{
+  "title": "FedDAC: Federated Learning with Distribution Anonymization through Clustering on non-IID data - code, trained models and experiment logs",
+  "upload_type": "software",
+  "description": "Source code, experiment grid, raw per-run results (JSON), trained global models and aggregated tables/figures for the revised FedDAC manuscript. Includes FedDAC, FedAvg, FedProx, PP-CFL, FedSe and FedSeq re-implementations, component ablations, record-level DP-SGD with RDP accounting, and label-distribution/membership inference attacks on MNIST, CIFAR-10, CIFAR-100 and Tiny-ImageNet.",
+  "creators": [{"name": "Hashim, Ali"}],
+  "license": "MIT",
+  "keywords": ["federated learning", "non-IID", "client clustering", "differential privacy", "label distribution inference", "membership inference"],
+  "version": "1.0.0"
+}
