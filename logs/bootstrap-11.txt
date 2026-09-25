@@ -47,3 +47,23 @@ dataset ok cifar100 (50000, 3, 32, 32)
 [31/146] rc=0 ablation_mnist_dac_par_N20_a0.2_r0.1-0.0-0.9_s1
 [32/146] rc=0 ablation_mnist_dac_samplew_N20_a0.2_r0.1-0.0-0.9_s3
 dataset ok tinyimagenet (100000, 3, 64, 64)
+[33/146] rc=0 main_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s4_sgd0.02
+[34/146] rc=0 main_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s2_sgd0.02
+[35/146] rc=0 main_cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s1_sgd0.02
+[36/146] rc=0 ablation_cifar10_dac_samplew_N20_a0.2_r0.1-0.3-0.6_s2_sgd0.02
+[37/146] rc=0 ablation_cifar10_dac_par_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.02
+[38/146] rc=0 main_mnist_fedavg_N30_a0.2_r0.1-0.3-0.6_s2
+[39/146] rc=0 main_mnist_ppcfl_N30_a0.2_r0.1-0.3-0.6_s1
+[40/146] rc=0 main_mnist_fedseq_N30_a0.2_r0.1-0.3-0.6_s0
+[41/146] rc=0 main_mnist_fedavg_N40_a0.2_r0.1-0.3-0.6_s2
+[42/146] rc=0 main_mnist_ppcfl_N40_a0.2_r0.1-0.3-0.6_s4
+[43/146] rc=0 main_mnist_feddac_N40_a0.2_r0.1-0.3-0.6_s1
+[44/146] rc=0 main_mnist_fedprox_N50_a0.2_r0.1-0.3-0.6_s3
+[45/146] rc=0 main_mnist_fedseq_N50_a0.2_r0.1-0.3-0.6_s0
+[46/146] rc=0 main_mnist_fedavg_N60_a0.2_r0.1-0.3-0.6_s2
+[47/146] rc=0 main_mnist_ppcfl_N60_a0.2_r0.1-0.3-0.6_s4
+[48/146] rc=0 main_mnist_feddac_N60_a0.2_r0.1-0.3-0.6_s1
+[49/146] rc=0 main_mnist_fedprox_N70_a0.2_r0.1-0.3-0.6_s3
+[50/146] rc=0 main_mnist_fedseq_N70_a0.2_r0.1-0.3-0.6_s0
+[51/146] rc=0 main_mnist_fedavg_N20_a0.1_r0.1-0.3-0.6_s2
+[52/146] rc=0 main_mnist_ppcfl_N20_a0.1_r0.1-0.3-0.6_s4
