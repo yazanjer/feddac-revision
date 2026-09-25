@@ -1,0 +1,14 @@
+[fedseq] round 1/50 acc=46.44 f1=34.54
+[fedseq] round 5/50 acc=87.74 f1=87.15
+[fedseq] round 10/50 acc=96.12 f1=96.05
+[fedseq] round 15/50 acc=88.32 f1=88.55
+[fedseq] round 20/50 acc=92.08 f1=92.13
+[fedseq] round 25/50 acc=96.90 f1=96.88
+[fedseq] round 30/50 acc=90.88 f1=91.05
+[fedseq] round 35/50 acc=98.09 f1=98.09
+[fedseq] round 40/50 acc=98.26 f1=98.27
+[fedseq] round 45/50 acc=92.90 f1=93.13
+[fedseq] round 50/50 acc=97.10 f1=97.02
+done mnist_fedseq_N20_a0.2_r0.1-0.4-0.5_s3_2a86c5c5a5: acc=97.10 f1=97.02 (498s)
+
+EXIT 0 in 500s
