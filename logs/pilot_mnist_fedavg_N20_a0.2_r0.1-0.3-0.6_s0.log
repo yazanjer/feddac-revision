@@ -1,0 +1,6 @@
+[fedavg] round 1/3 acc=51.95 f1=49.16
+[fedavg] round 2/3 acc=72.41 f1=70.65
+[fedavg] round 3/3 acc=78.17 f1=76.25
+done mnist_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_a4bf969c95: acc=78.17 f1=76.25 (52s)
+
+EXIT 0 in 59s

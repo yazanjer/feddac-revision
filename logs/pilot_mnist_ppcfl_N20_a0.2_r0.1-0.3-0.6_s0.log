@@ -1,0 +1,6 @@
+[ppcfl] round 1/3 acc=54.76 f1=52.31
+[ppcfl] round 2/3 acc=71.95 f1=70.20
+[ppcfl] round 3/3 acc=78.24 f1=76.56
+done mnist_ppcfl_N20_a0.2_r0.1-0.3-0.6_s0_4d22d6543a: acc=78.24 f1=76.56 (49s)
+
+EXIT 0 in 56s
