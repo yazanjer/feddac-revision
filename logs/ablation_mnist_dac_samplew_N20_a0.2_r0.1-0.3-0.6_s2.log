@@ -1,0 +1,14 @@
+[dac_samplew] round 1/50 acc=74.04 f1=70.00
+[dac_samplew] round 5/50 acc=93.85 f1=93.80
+[dac_samplew] round 10/50 acc=96.66 f1=96.65
+[dac_samplew] round 15/50 acc=97.34 f1=97.35
+[dac_samplew] round 20/50 acc=97.21 f1=97.23
+[dac_samplew] round 25/50 acc=98.06 f1=98.06
+[dac_samplew] round 30/50 acc=97.49 f1=97.47
+[dac_samplew] round 35/50 acc=98.49 f1=98.48
+[dac_samplew] round 40/50 acc=98.28 f1=98.25
+[dac_samplew] round 45/50 acc=98.62 f1=98.60
+[dac_samplew] round 50/50 acc=98.63 f1=98.62
+done mnist_dac_samplew_N20_a0.2_r0.1-0.3-0.6_s2_92ad4d85d0: acc=98.63 f1=98.62 (516s)
+
+EXIT 0 in 518s
