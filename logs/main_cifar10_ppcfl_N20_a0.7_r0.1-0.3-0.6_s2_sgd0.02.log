@@ -1,0 +1,14 @@
+[ppcfl] round 1/100 acc=20.03 f1=11.41
+[ppcfl] round 10/100 acc=40.60 f1=36.98
+[ppcfl] round 20/100 acc=49.10 f1=48.07
+[ppcfl] round 30/100 acc=55.66 f1=55.25
+[ppcfl] round 40/100 acc=59.24 f1=59.21
+[ppcfl] round 50/100 acc=61.56 f1=61.63
+[ppcfl] round 60/100 acc=63.71 f1=63.81
+[ppcfl] round 70/100 acc=64.29 f1=64.37
+[ppcfl] round 80/100 acc=65.28 f1=65.35
+[ppcfl] round 90/100 acc=64.36 f1=64.45
+[ppcfl] round 100/100 acc=64.77 f1=64.89
+done cifar10_ppcfl_N20_a0.7_r0.1-0.3-0.6_s2_df65e4e994: acc=64.77 f1=64.89 (787s)
+
+EXIT 0 in 790s
