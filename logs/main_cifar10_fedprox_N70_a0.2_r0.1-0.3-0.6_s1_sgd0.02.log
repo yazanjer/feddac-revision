@@ -10,3 +10,5 @@
 [fedprox] round 90/100 acc=58.53 f1=57.75
 [fedprox] round 100/100 acc=59.97 f1=59.55
 done cifar10_fedprox_N70_a0.2_r0.1-0.3-0.6_s1_71ef3ba526: acc=59.97 f1=59.55 (1266s)
+
+EXIT 0 in 1268s
