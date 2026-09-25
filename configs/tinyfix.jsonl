@@ -1,0 +1,6 @@
+{"clients": 50, "alpha": 0.2, "ratios": [0.1, 0.3, 0.6], "dataset": "tinyimagenet", "method": "fedprox", "seed": 4, "save_model": false, "exp": "scale", "prio": 2, "extra": ["--optimizer", "sgd", "--lr", "0.05"]}
+{"clients": 50, "alpha": 0.2, "ratios": [0.1, 0.3, 0.6], "dataset": "tinyimagenet", "method": "ppcfl", "seed": 3, "save_model": false, "exp": "scale", "prio": 2, "extra": ["--optimizer", "sgd", "--lr", "0.05"]}
+{"clients": 50, "alpha": 0.2, "ratios": [0.1, 0.3, 0.6], "dataset": "tinyimagenet", "method": "fedse", "seed": 2, "save_model": false, "exp": "scale", "prio": 2, "extra": ["--optimizer", "sgd", "--lr", "0.05"]}
+{"clients": 50, "alpha": 0.2, "ratios": [0.1, 0.3, 0.6], "dataset": "tinyimagenet", "method": "fedseq", "seed": 1, "save_model": false, "exp": "scale", "prio": 2, "extra": ["--optimizer", "sgd", "--lr", "0.05"]}
+{"clients": 50, "alpha": 0.2, "ratios": [0.1, 0.3, 0.6], "dataset": "tinyimagenet", "method": "feddac", "seed": 0, "save_model": true, "exp": "scale", "prio": 2, "extra": ["--optimizer", "sgd", "--lr", "0.05"]}
+{"clients": 50, "alpha": 0.2, "ratios": [0.1, 0.3, 0.6], "dataset": "tinyimagenet", "method": "feddac", "seed": 4, "save_model": false, "exp": "scale", "prio": 2, "extra": ["--optimizer", "sgd", "--lr", "0.05"]}
