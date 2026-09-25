@@ -2,3 +2,17 @@
   return torch._C._cuda_getDeviceCount() > 0
 /usr/local/lib/python3.11/dist-packages/opacus/accountants/analysis/rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
   warnings.warn(
+[fedavg] round 1/50 acc=10.87 f1=3.20
+[fedavg] round 5/50 acc=46.92 f1=38.68
+[fedavg] round 10/50 acc=61.83 f1=57.03
+[fedavg] round 15/50 acc=66.43 f1=63.36
+[fedavg] round 20/50 acc=69.91 f1=67.56
+[fedavg] round 25/50 acc=74.75 f1=73.66
+[fedavg] round 30/50 acc=77.31 f1=76.68
+[fedavg] round 35/50 acc=78.75 f1=78.21
+[fedavg] round 40/50 acc=80.25 f1=79.76
+[fedavg] round 45/50 acc=81.29 f1=80.92
+[fedavg] round 50/50 acc=82.62 f1=82.33
+done mnist_fedavg_N20_a0.2_r0.1-0.3-0.6_dp4_s0_211775899e: acc=82.62 f1=82.33 (1084s)
+
+EXIT 0 in 1087s
