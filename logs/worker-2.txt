@@ -1,17 +1,3 @@
-[05:56:38] cloned, installing requirements
-[notice] A new release of pip is available: 24.2 -> 26.2.1
-[notice] To update, run: python -m pip install --upgrade pip
-[05:57:22] requirements installed
-1728 jobs Counter({'main': 1230, 'dp': 180, 'ablation': 150, 'noniid': 108, 'attack': 60})
-name, memory.total [MiB]
-NVIDIA GeForce RTX 3090, 24576 MiB
-128
-               total        used        free      shared  buff/cache   available
-Mem:             220          18          87           0         113         199
-dataset ok mnist (60000, 1, 28, 28)
-dataset ok cifar10 (50000, 3, 32, 32)
-known finished runs: 1237
-[05:57:42] datasets ready, starting worker
 shard 2/12: 141 jobs, est. cost 325
 [1/141] rc=0 attack_mnist_fedavg_N20_a0.2_r0.1-0.3-0.6_s2_atk
 [2/141] rc=0 attack_mnist_fedseq_N20_a0.2_r0.1-0.3-0.6_s2_atk
@@ -36,11 +22,9 @@ shard 2/12: 141 jobs, est. cost 325
 [21/141] rc=0 main_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s2
 [22/141] rc=0 main_cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s1
 [23/141] rc=0 main_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s4
-dataset ok cifar100 (50000, 3, 32, 32)
 [24/141] rc=0 ablation_mnist_dac_uniform_N20_a0.2_r0.1-0.3-0.6_s1
 [25/141] rc=0 ablation_mnist_dac_noisyhist_N20_a0.2_r0.1-0.3-0.6_s3
 [26/141] rc=0 ablation_mnist_dac_uniform_N50_a0.2_r0.1-0.3-0.6_s0
 [27/141] rc=0 ablation_mnist_dac_noisyhist_N50_a0.2_r0.1-0.3-0.6_s2
 [28/141] rc=0 ablation_mnist_dac_par_N20_a0.2_r0.1-0.0-0.9_s4
 [29/141] rc=0 ablation_mnist_dac_noisyhist_N20_a0.2_r0.1-0.0-0.9_s1
-dataset ok tinyimagenet (100000, 3, 64, 64)
