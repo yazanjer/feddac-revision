@@ -1,0 +1,14 @@
+[fedseq] round 1/100 acc=10.00 f1=1.82
+[fedseq] round 10/100 acc=15.84 f1=11.53
+[fedseq] round 20/100 acc=30.59 f1=25.13
+[fedseq] round 30/100 acc=32.14 f1=28.33
+[fedseq] round 40/100 acc=38.98 f1=38.35
+[fedseq] round 50/100 acc=36.68 f1=33.92
+[fedseq] round 60/100 acc=37.01 f1=35.72
+[fedseq] round 70/100 acc=38.28 f1=37.68
+[fedseq] round 80/100 acc=38.34 f1=37.14
+[fedseq] round 90/100 acc=37.86 f1=37.47
+[fedseq] round 100/100 acc=35.29 f1=33.68
+done cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_dp8_s1_7dc4766089: acc=35.29 f1=33.68 (1593s)
+
+EXIT 0 in 1597s
