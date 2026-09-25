@@ -1,0 +1,5 @@
+[fedseq] round 30/60 acc=18.60 f1=15.49
+[fedseq] round 60/60 acc=29.66 f1=28.14
+done tinyimagenet_fedseq_N50_a0.2_r0.1-0.3-0.6_s3_dfe5d365ed: acc=29.66 f1=28.14 (4352s)
+
+EXIT 0 in 4365s

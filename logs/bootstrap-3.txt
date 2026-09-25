@@ -35,3 +35,4 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [18/22] rc=0 scale_tinyimagenet_fedse_N50_a0.2_r0.1-0.3-0.6_s0
 [19/22] rc=0 scale_cifar100_fedprox_N50_a0.2_r0.1-0.3-0.6_s4
 [20/22] rc=0 scale_tinyimagenet_fedse_N50_a0.2_r0.1-0.3-0.6_s4
+[21/22] rc=0 scale_tinyimagenet_fedseq_N50_a0.2_r0.1-0.3-0.6_s3
