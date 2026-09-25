@@ -1,0 +1,13 @@
+[fedprox] round 10/100 acc=5.23 f1=1.43
+[fedprox] round 20/100 acc=8.26 f1=3.80
+[fedprox] round 30/100 acc=10.24 f1=5.42
+[fedprox] round 40/100 acc=12.73 f1=8.68
+[fedprox] round 50/100 acc=14.34 f1=10.39
+[fedprox] round 60/100 acc=16.88 f1=13.06
+[fedprox] round 70/100 acc=18.77 f1=14.79
+[fedprox] round 80/100 acc=20.16 f1=16.35
+[fedprox] round 90/100 acc=21.35 f1=18.06
+[fedprox] round 100/100 acc=23.44 f1=19.72
+done cifar100_fedprox_N20_a0.2_r0.1-0.3-0.6_s2_38f85a2a9a: acc=23.44 f1=19.72 (5708s)
+
+EXIT 0 in 5715s
