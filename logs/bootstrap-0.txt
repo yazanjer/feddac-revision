@@ -11,3 +11,7 @@ Mem:            1007          75         580          37         351         889
 dataset ok mnist (60000, 1, 28, 28)
 dataset ok cifar10 (50000, 3, 32, 32)
 [00:38:33] datasets ready, starting worker
+shard 0/1: 6 jobs, est. cost 48
+dataset ok cifar100 (50000, 3, 32, 32)
+dataset ok tinyimagenet (100000, 3, 64, 64)
+[1/6] rc=1 diag_cifar100_fedavg_N20_a0.2_r0.1-0.3-0.6_s0

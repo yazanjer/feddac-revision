@@ -1,0 +1,2 @@
+shard 0/1: 6 jobs, est. cost 48
+[1/6] rc=1 diag_cifar100_fedavg_N20_a0.2_r0.1-0.3-0.6_s0
