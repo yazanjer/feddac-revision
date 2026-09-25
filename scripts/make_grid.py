@@ -3,7 +3,7 @@
 
 E1 main      MNIST / CIFAR-10: client-count, Dirichlet-alpha and client-composition sweeps
              (replaces Tables 2-7), 6 methods x 5 seeds, no DP.
-E2 noniid    CIFAR-10, all clients Dirichlet-heterogeneous, alpha x N grid (Fig. 3), 3 seeds.
+E2 noniid    CIFAR-10, all clients Dirichlet-heterogeneous, alpha x N grid (Fig. 3), 2 seeds.
 E3 ablation  component ablation (R2-C5) on three representative settings, 5 seeds.
 E4 dp        formal record-level DP-SGD, eps in {1, 4, 8}, delta = 1e-5 (R2-C1, R2-C3), 5 seeds.
 E5 scale     CIFAR-100 (N=20, 50) and Tiny-ImageNet (N=50) with ResNet-18-GN (R1-C3), 5 seeds.
@@ -16,6 +16,9 @@ BASE = ["fedavg", "fedprox", "ppcfl", "fedse", "fedseq", "feddac"]
 ABL = ["rand_seq", "dac_par", "dac_uniform", "dac_samplew", "dac_noisyhist"]
 DEF = dict(clients=20, alpha=0.2, ratios=[0.1, 0.3, 0.6])
 ROUNDS = {"mnist": 50, "cifar10": 100}
+# CIFAR-10 non-private runs use plain SGD, lr 0.02: selected on the default setting (exp 'lrsel') as the
+# best rate for every method; with Adam (lr 1e-3) the sequential methods drift towards the last client.
+SGD_C10 = ["--optimizer", "sgd", "--lr", "0.02", "--tag", "sgd0.02"]
 
 
 def job(exp, prio, **kw):
@@ -59,21 +62,30 @@ def grid():
             for m in BASE:
                 for s in range(5):
                     prio = 2 if ci == 0 else 4
-                    jobs.append(job("main", prio, dataset=d, method=m, seed=s,
-                                    save_model=(s == 0 and ci == 0), **c))
+                    j = job("main", prio, dataset=d, method=m, seed=s, save_model=(s == 0 and ci == 0), **c)
+                    if d == "cifar10":
+                        j["extra"] = list(SGD_C10)
+                    jobs.append(j)
+    # CIFAR-10 with the original optimiser (Adam, lr 1e-3): default setting only (sensitivity analysis)
+    for m in BASE:
+        for s in range(5):
+            jobs.append(job("main", 2, dataset="cifar10", method=m, seed=s, save_model=(s == 0)))
     # E3 ablations
     for d in ("mnist", "cifar10"):
         for c in (dict(), dict(clients=50), dict(ratios=[0.1, 0.0, 0.9])):
             for m in ABL:
                 for s in range(5):
-                    jobs.append(job("ablation", 3, dataset=d, method=m, seed=s, **c))
+                    j = job("ablation", 3, dataset=d, method=m, seed=s, **c)
+                    if d == "cifar10":
+                        j["extra"] = list(SGD_C10)
+                    jobs.append(j)
     # E2 non-IID characterisation
     for a in (0.1, 0.5, 0.9):
         for N in (20, 40, 80):
             for m in BASE:
-                for s in range(3):
+                for s in range(2):
                     jobs.append(job("noniid", 5, dataset="cifar10", method=m, seed=s, clients=N,
-                                    alpha=a, ratios=[0.0, 1.0, 0.0]))
+                                    alpha=a, ratios=[0.0, 1.0, 0.0], extra=list(SGD_C10)))
     jobs.sort(key=lambda j: j["prio"])
     return jobs
 
