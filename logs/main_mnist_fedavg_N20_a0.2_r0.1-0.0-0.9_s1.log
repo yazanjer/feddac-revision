@@ -1,0 +1,14 @@
+[fedavg] round 1/50 acc=50.06 f1=40.90
+[fedavg] round 5/50 acc=76.99 f1=70.98
+[fedavg] round 10/50 acc=82.85 f1=78.42
+[fedavg] round 15/50 acc=87.15 f1=84.71
+[fedavg] round 20/50 acc=89.00 f1=86.79
+[fedavg] round 25/50 acc=90.48 f1=89.37
+[fedavg] round 30/50 acc=89.72 f1=88.33
+[fedavg] round 35/50 acc=91.81 f1=91.06
+[fedavg] round 40/50 acc=93.26 f1=92.74
+[fedavg] round 45/50 acc=93.01 f1=92.45
+[fedavg] round 50/50 acc=94.11 f1=93.70
+done mnist_fedavg_N20_a0.2_r0.1-0-0.9_s1_4be1895b51: acc=94.11 f1=93.70 (497s)
+
+EXIT 0 in 499s
