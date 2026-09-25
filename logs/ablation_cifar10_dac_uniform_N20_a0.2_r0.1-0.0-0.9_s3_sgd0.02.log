@@ -1,0 +1,14 @@
+[dac_uniform] round 1/100 acc=23.40 f1=13.68
+[dac_uniform] round 10/100 acc=40.12 f1=33.07
+[dac_uniform] round 20/100 acc=46.86 f1=44.30
+[dac_uniform] round 30/100 acc=46.34 f1=43.31
+[dac_uniform] round 40/100 acc=48.61 f1=46.13
+[dac_uniform] round 50/100 acc=53.57 f1=52.04
+[dac_uniform] round 60/100 acc=46.47 f1=46.29
+[dac_uniform] round 70/100 acc=50.95 f1=48.25
+[dac_uniform] round 80/100 acc=51.24 f1=51.42
+[dac_uniform] round 90/100 acc=51.69 f1=49.93
+[dac_uniform] round 100/100 acc=56.00 f1=54.34
+done cifar10_dac_uniform_N20_a0.2_r0.1-0-0.9_s3_2622559692: acc=56.00 f1=54.34 (762s)
+
+EXIT 0 in 764s

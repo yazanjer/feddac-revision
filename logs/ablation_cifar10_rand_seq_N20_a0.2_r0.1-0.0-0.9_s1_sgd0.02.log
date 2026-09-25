@@ -1,0 +1,14 @@
+[rand_seq] round 1/100 acc=16.76 f1=10.48
+[rand_seq] round 10/100 acc=41.87 f1=39.58
+[rand_seq] round 20/100 acc=48.18 f1=45.37
+[rand_seq] round 30/100 acc=52.03 f1=50.94
+[rand_seq] round 40/100 acc=48.91 f1=50.48
+[rand_seq] round 50/100 acc=60.71 f1=60.36
+[rand_seq] round 60/100 acc=60.65 f1=59.72
+[rand_seq] round 70/100 acc=61.84 f1=62.23
+[rand_seq] round 80/100 acc=56.66 f1=55.14
+[rand_seq] round 90/100 acc=54.25 f1=55.35
+[rand_seq] round 100/100 acc=57.76 f1=58.36
+done cifar10_rand_seq_N20_a0.2_r0.1-0-0.9_s1_d9e22764d5: acc=57.76 f1=58.36 (759s)
+
+EXIT 0 in 761s
