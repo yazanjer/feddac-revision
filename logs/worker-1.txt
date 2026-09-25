@@ -1,1 +1,4 @@
 shard 1/10: 174 jobs, est. cost 397
+[1/174] rc=0 attack_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s2_atk
+[2/174] rc=0 attack_mnist_fedavg_N20_a0.2_r0.1-0.3-0.6_s1_atk
+[3/174] rc=0 attack_mnist_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_dp4.0_atk
