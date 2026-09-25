@@ -55,3 +55,5 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [39/176] rc=0 ablation_cifar10_rand_seq_N20_a0.2_r0.1-0.3-0.6_s0
 [40/176] rc=0 ablation_cifar10_dac_uniform_N20_a0.2_r0.1-0.3-0.6_s0
 [41/176] rc=0 ablation_cifar10_dac_noisyhist_N20_a0.2_r0.1-0.3-0.6_s0
+[42/176] rc=0 ablation_cifar10_dac_par_N50_a0.2_r0.1-0.3-0.6_s0
+[43/176] rc=0 ablation_cifar10_dac_samplew_N50_a0.2_r0.1-0.3-0.6_s0
