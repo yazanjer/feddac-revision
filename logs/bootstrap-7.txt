@@ -78,3 +78,17 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [61/148] rc=0 ablation_cifar10_dac_noisyhist_N20_a0.2_r0.1-0.0-0.9_s3_sgd0.02
 [62/148] rc=0 main_mnist_ppcfl_N20_a0.7_r0.1-0.3-0.6_s0
 [63/148] rc=0 main_mnist_fedseq_N20_a0.7_r0.1-0.3-0.6_s2
+[64/148] rc=0 main_mnist_fedse_N20_a0.1_r0.1-0.3-0.6_s1
+[65/148] rc=0 main_mnist_feddac_N20_a1.0_r0.1-0.3-0.6_s3
+[66/148] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.0-0.9_s0
+[67/148] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.0-0.9_s2
+[68/148] rc=0 main_mnist_fedavg_N20_a0.5_r0.1-0.3-0.6_s4
+[69/148] rc=0 main_mnist_fedse_N20_a0.5_r0.1-0.3-0.6_s1
+[70/148] rc=0 main_mnist_feddac_N20_a0.2_r0.1-0.1-0.8_s3
+[71/148] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.2-0.7_s0
+[72/148] rc=0 main_mnist_fedavg_N20_a1.0_r0.1-0.3-0.6_s4
+[73/148] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.2-0.7_s2
+[74/148] rc=0 main_mnist_fedse_N20_a1.0_r0.1-0.3-0.6_s1
+[75/148] rc=0 main_mnist_feddac_N20_a0.2_r0.1-0.4-0.5_s3
+[76/148] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.5-0.4_s0
+[77/148] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.5-0.4_s2
