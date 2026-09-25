@@ -80,3 +80,9 @@ shard 9/10: 176 jobs, est. cost 398
 [79/176] rc=0 main_mnist_fedavg_N20_a0.2_r0.1-0.1-0.8_s1
 [80/176] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.1-0.8_s1
 [81/176] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.1-0.8_s1
+[82/176] rc=0 main_mnist_fedavg_N20_a0.2_r0.1-0.2-0.7_s1
+[83/176] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.2-0.7_s1
+[84/176] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.2-0.7_s1
+[85/176] rc=0 main_mnist_fedavg_N20_a0.2_r0.1-0.4-0.5_s1
+[86/176] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.4-0.5_s1
+[87/176] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.4-0.5_s1
