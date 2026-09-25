@@ -50,3 +50,6 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [13/30] rc=0 mia_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s0_dp4.0
 [14/30] rc=0 mia_mnist_fedavg_N20_a0.2_r0.1-0.3-0.6_s1_dp4.0
 [15/30] rc=0 mia_mnist_rand_seq_N20_a0.2_r0.1-0.3-0.6_s2
+[16/30] rc=0 mia_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s0
+[17/30] rc=0 mia_cifar10_fedavg_N20_a0.2_r0.1-0.3-0.6_s2
+[18/30] rc=0 mia_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s0
