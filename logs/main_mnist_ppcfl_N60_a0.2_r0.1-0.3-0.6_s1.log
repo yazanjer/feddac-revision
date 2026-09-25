@@ -1,0 +1,14 @@
+[ppcfl] round 1/50 acc=32.58 f1=30.33
+[ppcfl] round 5/50 acc=91.07 f1=91.15
+[ppcfl] round 10/50 acc=95.54 f1=95.53
+[ppcfl] round 15/50 acc=96.57 f1=96.56
+[ppcfl] round 20/50 acc=97.13 f1=97.13
+[ppcfl] round 25/50 acc=97.40 f1=97.40
+[ppcfl] round 30/50 acc=97.82 f1=97.82
+[ppcfl] round 35/50 acc=97.98 f1=97.98
+[ppcfl] round 40/50 acc=98.09 f1=98.09
+[ppcfl] round 45/50 acc=98.24 f1=98.23
+[ppcfl] round 50/50 acc=98.23 f1=98.23
+done mnist_ppcfl_N60_a0.2_r0.1-0.3-0.6_s1_800c7cbfb3: acc=98.23 f1=98.23 (499s)
+
+EXIT 0 in 501s
