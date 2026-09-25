@@ -9,3 +9,6 @@ shard 3/4: 22 jobs, est. cost 204
 [8/22] rc=1 scale_cifar100_fedprox_N50_a0.2_r0.1-0.3-0.6_s4
 [9/22] rc=0 scale_cifar100_fedavg_N50_a0.2_r0.1-0.3-0.6_s1
 [10/22] rc=0 scale_cifar100_ppcfl_N50_a0.2_r0.1-0.3-0.6_s3
+[11/22] rc=0 scale_cifar100_fedse_N50_a0.2_r0.1-0.3-0.6_s2
+[12/22] rc=0 scale_cifar100_fedprox_N50_a0.2_r0.1-0.3-0.6_s0
+[13/22] rc=0 scale_cifar100_fedseq_N50_a0.2_r0.1-0.3-0.6_s1
