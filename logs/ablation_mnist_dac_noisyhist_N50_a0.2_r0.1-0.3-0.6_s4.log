@@ -1,0 +1,14 @@
+[dac_noisyhist] round 1/50 acc=53.32 f1=46.35
+[dac_noisyhist] round 5/50 acc=97.04 f1=97.06
+[dac_noisyhist] round 10/50 acc=97.60 f1=97.59
+[dac_noisyhist] round 15/50 acc=98.00 f1=97.99
+[dac_noisyhist] round 20/50 acc=98.61 f1=98.61
+[dac_noisyhist] round 25/50 acc=98.07 f1=98.05
+[dac_noisyhist] round 30/50 acc=98.14 f1=98.16
+[dac_noisyhist] round 35/50 acc=98.92 f1=98.91
+[dac_noisyhist] round 40/50 acc=98.87 f1=98.86
+[dac_noisyhist] round 45/50 acc=98.73 f1=98.73
+[dac_noisyhist] round 50/50 acc=98.90 f1=98.90
+done mnist_dac_noisyhist_N50_a0.2_r0.1-0.3-0.6_s4_f54157f994: acc=98.90 f1=98.90 (514s)
+
+EXIT 0 in 516s
