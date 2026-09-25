@@ -66,3 +66,17 @@ shard 11/12: 146 jobs, est. cost 326
 [65/146] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.0-0.9_s0
 [66/146] rc=0 main_mnist_fedavg_N20_a0.2_r0.1-0.1-0.8_s2
 [67/146] rc=0 main_mnist_ppcfl_N20_a0.5_r0.1-0.3-0.6_s4
+[68/146] rc=0 main_mnist_feddac_N20_a0.5_r0.1-0.3-0.6_s1
+[69/146] rc=0 main_mnist_fedprox_N20_a0.2_r0.1-0.2-0.7_s3
+[70/146] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.2-0.7_s0
+[71/146] rc=0 main_mnist_fedavg_N20_a0.2_r0.1-0.4-0.5_s2
+[72/146] rc=0 main_mnist_feddac_N20_a1.0_r0.1-0.3-0.6_s1
+[73/146] rc=0 main_mnist_ppcfl_N20_a1.0_r0.1-0.3-0.6_s4
+[74/146] rc=0 main_mnist_fedprox_N20_a0.2_r0.1-0.5-0.4_s3
+[75/146] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.5-0.4_s0
+[76/146] rc=0 main_mnist_fedavg_N20_a0.2_r0.1-0.6-0.3_s2
+[77/146] rc=0 main_mnist_ppcfl_N20_a0.2_r0.1-0.1-0.8_s4
+[78/146] rc=0 main_mnist_feddac_N20_a0.2_r0.1-0.1-0.8_s1
+[79/146] rc=0 main_mnist_fedprox_N20_a0.2_r0.1-0.7-0.2_s3
+[80/146] rc=0 main_mnist_fedseq_N20_a0.2_r0.1-0.7-0.2_s0
+[81/146] rc=0 main_mnist_fedavg_N20_a0.2_r0.1-0.8-0.1_s2
