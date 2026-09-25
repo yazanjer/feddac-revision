@@ -46,7 +46,7 @@ def last_commit(b):
 def progress():
     out = {}
     for b in branches():
-        if not (b.startswith("results/pod-") or b.startswith("results/scale-") or b.startswith("results/mia-")) or "pilot" in b or "diag" in b: continue
+        if not any(b.startswith("results/" + x) for x in ("pod-", "scale-", "mia-", "v2-", "lrsel-", "retry")) or "pilot" in b or "diag" in b: continue
         k = re.sub(r"\D", "", b.split("-")[-1])
         try:
             t = gh_file(f"logs/worker-{k}.txt", b)
