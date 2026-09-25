@@ -1,1 +1,2 @@
 shard 0/3: 2 jobs, est. cost 24
+[1/2] rc=0 scale_tinyimagenet_fedseq_N50_a0.2_r0.1-0.3-0.6_s1
