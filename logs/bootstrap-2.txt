@@ -22,3 +22,6 @@ dataset ok tinyimagenet (100000, 3, 64, 64)
 [6/20] rc=0 lrsel_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.01
 [7/20] rc=0 lrsel_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s1_sgd0.01
 [8/20] rc=0 lrsel_cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s1_sgd0.01
+[9/20] rc=0 lrsel_cifar10_ppcfl_N20_a0.2_r0.1-0.3-0.6_s1_sgd0.02
+[10/20] rc=0 lrsel_cifar10_fedseq_N20_a0.2_r0.1-0.3-0.6_s0_sgd0.02
+[11/20] rc=0 lrsel_cifar10_feddac_N20_a0.2_r0.1-0.3-0.6_s1_sgd0.02
