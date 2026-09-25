@@ -1,0 +1,4 @@
+[fedseq] round 1/1 acc=0.58 f1=0.02
+done tinyimagenet_fedseq_N20_a0.2_r0.1-0.3-0.6_s0_398bc69c8e: acc=0.58 f1=0.02 (79s)
+
+EXIT 0 in 88s

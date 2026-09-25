@@ -1,0 +1,4 @@
+[fedavg] round 1/1 acc=0.50 f1=0.00
+done tinyimagenet_fedavg_N20_a0.2_r0.1-0.3-0.6_s0_2d771c9546: acc=0.50 f1=0.00 (81s)
+
+EXIT 0 in 90s
