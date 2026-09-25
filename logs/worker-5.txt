@@ -5,3 +5,11 @@ shard 5/10: 175 jobs, est. cost 396
 [3/175] rc=0 attack_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s0_atk
 [4/175] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s2_dp1.0
 [5/175] rc=0 dp_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s2_dp1.0
+shard 5/10: 175 jobs, est. cost 396
+[1/175] rc=0 attack_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s1_dp4.0_atk
+[2/175] rc=0 attack_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s0_atk
+[3/175] rc=0 attack_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s2_atk
+[4/175] rc=0 dp_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s2_dp1.0
+[5/175] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s2_dp1.0
+[6/175] rc=0 dp_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s2_dp1.0
+[7/175] rc=0 dp_mnist_fedprox_N20_a0.2_r0.1-0.3-0.6_s2_dp4.0
