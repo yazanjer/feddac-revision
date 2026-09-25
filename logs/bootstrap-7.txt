@@ -2,3 +2,13 @@
 [notice] A new release of pip is available: 24.2 -> 26.2.1
 [notice] To update, run: python -m pip install --upgrade pip
 [05:57:06] requirements installed
+1728 jobs Counter({'main': 1230, 'dp': 180, 'ablation': 150, 'noniid': 108, 'attack': 60})
+name, memory.total [MiB]
+NVIDIA RTX A4500, 20470 MiB
+12
+               total        used        free      shared  buff/cache   available
+Mem:              31           1          23           0           6          29
+dataset ok mnist (60000, 1, 28, 28)
+dataset ok cifar10 (50000, 3, 32, 32)
+known finished runs: 1237
+[05:57:26] datasets ready, starting worker
