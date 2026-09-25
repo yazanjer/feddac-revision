@@ -14,3 +14,5 @@ dataset ok cifar10 (50000, 3, 32, 32)
 shard 7/10: 175 jobs, est. cost 396
 dataset ok cifar100 (50000, 3, 32, 32)
 dataset ok tinyimagenet (100000, 3, 64, 64)
+[1/175] rc=0 attack_mnist_fedse_N20_a0.2_r0.1-0.3-0.6_s0_dp4.0_atk
+[2/175] rc=0 attack_mnist_feddac_N20_a0.2_r0.1-0.3-0.6_s2_atk
