@@ -54,8 +54,11 @@ def load(results):
 
 def fit(tex):
     """Scale wide tables down to the text width (adjustbox 'max width' never enlarges)."""
-    return tex.replace("\\begin{tabular}", "\\begin{adjustbox}{max width=\\linewidth}\n\\begin{tabular}").replace(
+    tex = tex.replace("\\begin{tabular}", "\\begin{adjustbox}{max width=\\linewidth}\n\\begin{tabular}").replace(
         "\\end{tabular}", "\\end{tabular}\n\\end{adjustbox}")
+    if "$^{[" in tex:
+        tex = tex.replace("\\end{table}", "\\\\[1pt]{\\scriptsize $^{[k]}$: mean over the $k<5$ seeds available.}\n\\end{table}")
+    return tex
 
 
 def ms(v):
@@ -63,8 +66,13 @@ def ms(v):
     return (v.mean(), v.std(ddof=1) if len(v) > 1 else 0.0, len(v))
 
 
-def fmt(m, s, bold=False):
+NSEEDS = 5
+
+
+def fmt(m, s, bold=False, n=None):
     t = f"{m:.2f}$\\pm${s:.2f}"
+    if n is not None and n < NSEEDS:
+        t += f"$^{{[{n}]}}$"  # fewer seeds than planned (runs still in progress)
     return f"\\textbf{{{t}}}" if bold else t
 
 
@@ -109,7 +117,7 @@ def comparison_table(rows, dataset, exp, var, values, label, caption, methods=OR
             bo = max(others, key=lambda x: stats[x][0][0]) if others else None
             p = pval(accs, stats[bo][2]) if (m == "feddac" and bo) else None
             ptxt = ("--" if p is not None and p != p else ("$<$0.001" if p is not None and p < 1e-3 else (f"{p:.3f}" if p is not None else "")))
-            lines.append(f"{vv if first else ''} & {NAMES[m]} & {fmt(am, asd, m == best)} & {fmt(fm, fsd, m == best)} & {ptxt} \\\\")
+            lines.append(f"{vv if first else ''} & {NAMES[m]} & {fmt(am, asd, m == best, n)} & {fmt(fm, fsd, m == best)} & {ptxt} \\\\")
             csv.append([dataset, str(v), m, am, asd, fm, fsd, n, p])
             first = False
         lines.append("\\midrule")
@@ -148,7 +156,7 @@ def dp_table(rows):
             cells = []
             for eps in (1.0, 4.0, 8.0, None, "t"):
                 v = [r["acc"] for r in src(eps) if r["dataset"] == d and r["method"] == m and (r["dp"] == eps if eps not in (None, "t") else True)]
-                cells.append(fmt(*ms(v)[:2], best.get(eps) == m) if v else "--")
+                cells.append(fmt(*ms(v)[:2], best.get(eps) == m, len(v)) if v else "--")
             lines.append(f"{('MNIST' if d == 'mnist' else 'CIFAR-10') if first else ''} & {NAMES[m]} & " + " & ".join(cells) + " \\\\")
             first = False
         lines.append("\\midrule")
@@ -176,7 +184,7 @@ def scale_table(rows):
             if not a:
                 continue
             dn = {"cifar100": "CIFAR-100", "tinyimagenet": "Tiny-ImageNet"}[d]
-            lines.append(f"{dn if first else ''} & {N if first else ''} & {NAMES[m]} & {fmt(*ms(a)[:2], m == best)} & {fmt(*ms(f)[:2], m == best)} \\\\")
+            lines.append(f"{dn if first else ''} & {N if first else ''} & {NAMES[m]} & {fmt(*ms(a)[:2], m == best, len(a))} & {fmt(*ms(f)[:2], m == best)} \\\\")
             first = False
         lines.append("\\midrule")
     lines[-1] = "\\bottomrule"
@@ -200,7 +208,7 @@ def ablation_table(rows):
             for s in settings:
                 v = [r["acc"] for r in rows if r["dataset"] == d and r["method"] == m and not r["dp"]
                      and r["alpha"] == 0.2 and r["exp"] in ("main", "ablation") and s(r)]
-                cells.append(fmt(*ms(v)[:2]) if v else "--")
+                cells.append(fmt(*ms(v)[:2], False, len(v)) if v else "--")
         lines.append(f"{NAMES[m]} & " + " & ".join(cells) + " \\\\")
     lines += ["\\bottomrule", "\\end{tabular}", "\\end{table}"]
     return "\n".join(lines)
