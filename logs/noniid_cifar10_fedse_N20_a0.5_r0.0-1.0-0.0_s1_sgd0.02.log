@@ -1,0 +1,14 @@
+[fedse] round 1/100 acc=34.40 f1=30.16
+[fedse] round 10/100 acc=65.05 f1=65.15
+[fedse] round 20/100 acc=62.36 f1=62.77
+[fedse] round 30/100 acc=65.47 f1=65.64
+[fedse] round 40/100 acc=65.75 f1=65.76
+[fedse] round 50/100 acc=67.36 f1=67.51
+[fedse] round 60/100 acc=67.31 f1=66.98
+[fedse] round 70/100 acc=68.83 f1=68.66
+[fedse] round 80/100 acc=69.61 f1=69.22
+[fedse] round 90/100 acc=69.58 f1=70.03
+[fedse] round 100/100 acc=69.59 f1=69.60
+done cifar10_fedse_N20_a0.5_r0-1-0_s1_8b11855ed5: acc=69.59 f1=69.60 (1168s)
+
+EXIT 0 in 1173s
